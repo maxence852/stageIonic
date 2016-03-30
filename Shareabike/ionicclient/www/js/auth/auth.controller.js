@@ -1,7 +1,7 @@
 //Controlleur pour gérer le login
 
-myApp.controller('LoginCtrl', ['$scope', '$window', '$location', 'UserAuthFactory', 'AuthenticationFactory',
-  function($scope, $window, $location, UserAuthFactory, AuthenticationFactory) {
+myApp.controller('LoginCtrlIonic', ['$scope','$state', '$window', '$location', 'UserAuthFactory', 'AuthenticationFactory',
+  function($scope, $state, $window, $location, UserAuthFactory, AuthenticationFactory) {
 
     $scope.login = function() {
 
@@ -16,12 +16,12 @@ myApp.controller('LoginCtrl', ['$scope', '$window', '$location', 'UserAuthFactor
               AuthenticationFactory.isLogged = true;
               $window.sessionStorage.token = data.token;
               $window.sessionStorage.velo = data.bike;
-              $location.path("/");
+              //$location.path('/');
+              $state.go('app.menu1'); //Pour que cela fonctionne avec Ionic il faut utiliser $state.go et pas $location.path
               alert('#JeSuisAuthController');
           //}).error(function(status) {
           //  alert("Vous n'avez pas le droit d'administrateur!");
           //});
-
         }).error(function(status) {
           alert('Mot de passe ou Login non valide eee !');
         });

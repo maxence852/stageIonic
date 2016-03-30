@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var myApp = angular.module('starter', ['ionic', 'starter.controllers','ngRoute'])
+var myApp = angular.module('starter', ['ionic','ui.router', 'starter.controllers','ngRoute'])
 
 myApp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,41 +32,46 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'AppCtrl',
+      data:
+      {
+        requiredLogin : false
+      }
   })
 
   .state('app.menu1', {
     url: '/menu1',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu1.html'
+        templateUrl: 'templates/menu1.html',
     }
   },
-  access:
+  data:
   {
     requiredLogin: true
   }
   })
 
   .state('app.menu2', {
-      url: '/menu2',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/menu2.html',
+    url: '/menu2',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/menu2.html',
 
-          access: {
-            requiredLogin: true
-          }
-        }
       }
-    })
+    },
+    data: {
+      requiredLogin: true
+    }
+  })
+
     .state('app.menu3', {
       url: '/menu3',
       views: {
         'menuContent': {
           templateUrl: 'templates/menu3.html',
           controller: 'listeCtrl',
-          access: {
+          data: {
             requiredLogin: true
           }
         }
@@ -81,7 +86,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         templateUrl: 'templates/liste_velos.html',
         controller: 'ListeVeloCtrl',
 
-        access: {
+        data: {
           requiredLogin: true
         }
       }
@@ -92,7 +97,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       views: {
         'menuContent': {
           templateUrl: 'templates/login_users.html',
-          controller: 'LoginCtrl'
+          controller: 'LoginCtrlIonic',
+          data: {
+            requiredLogin: false
+          }
         }
       }
     })
@@ -101,7 +109,10 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       views: {
         'menuContent': {
           templateUrl: 'templates/register1.html',
-          controller: 'register1Ctrl'
+          controller: 'register1Ctrl',
+          data: {
+            requiredLogin: true
+          }
         }
       }
     })
@@ -111,10 +122,13 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       views: {
         'menuContent': {
           templateUrl: 'templates/register2.html',
-          controller: 'register2Ctrl'
+          controller: 'register2Ctrl',
+          data: {
+            requiredLogin: false
+          }
         }
       }
-    });
+    })
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login_users');
 })
