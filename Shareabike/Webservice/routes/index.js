@@ -12,8 +12,8 @@ Mis à jours : 28/12/2015
 var express = require('express');
 var router = express.Router();
 var auth = require('./login_pg');
-/*romano*/
-var auth2 = require('./login_user');
+/*Auth User Ionic*/
+var auth = require('./login_user');
 
 
 /* Routes d'acces libre */
@@ -25,8 +25,8 @@ router.use('/admin', require('../lib/validateToken'));
 //router.use('/login_users', require('./login_users'));
 
 
-/*romano*/
-router.post('/user', auth2.login);
+/*User Client Ionic*/
+router.post('/login2', auth.login);
 
 /* Routes d'acces avec Authentification + Autorisation: exploitant */
 router.use('/api/expl/pays', require('./pays')); 

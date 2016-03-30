@@ -34,7 +34,7 @@ myApp.factory('UserAuthFactory', function($window, $location, $http, Authenticat
   alert("#JeSuisAuthFactoryMilieu");
   return {
     login: function(username, password) {
-      return $http.post('https://vps258804.ovh.net:80/login', {
+      return $http.post('https://vps258804.ovh.net:80/login2', {
         login: username,
         password: password
       });
