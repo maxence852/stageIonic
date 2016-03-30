@@ -1,0 +1,12 @@
+<div class="container" ng-controller="CommentairePostCtrl">
+
+    <form>
+        <div class="form-group">
+            <label for="inputN">Nouveu commentaire:</label>
+            <input type:'text' class="form-control" id="inputN" placeholder="votre commentaire" ng-model="post.commentaire">
+        </div>
+  
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

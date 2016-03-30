@@ -1,0 +1,29 @@
+<ion-view view-title="register">
+  <ion-pane>
+    <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">mot de passe</span>
+          <input type="password" ng-model="password"ng-minlength="3">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">retaper le mot de passe</span>
+          <input type="password" ng-model="password2"ng-minlength="3">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Nom d'utilisateur</span>
+          <input type="text" ng-model="pseudo"ng-minlength="3">
+        </label>
+        <div class="padding">
+         <!--<a href="#/app/register2" > <input type="button" ng-disabled="(!email || !password) || (password != password2) || !pseudo " class="button button-block button-balanced"value="continuer"></a>-->
+          <input type="button" ng-disabled="(!email || !password) || (password != password2) || !pseudo " class="button button-block button-balanced"value="continuer" onclick="self.location.href='#/app/register2'"/>
+        </div>
+      </div>
+    </ion-content>
+  </ion-pane>
+</ion-view>

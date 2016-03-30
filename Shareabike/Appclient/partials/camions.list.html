@@ -1,0 +1,51 @@
+<div class="container" ng-controller="CamionGetCtrl">
+  <div class="page-header">
+    <h3>Camions</h3>
+  </div>
+  <a href="#/camions/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Numéro</th>
+        <th>Domaine</th>
+        <th>Type</th>
+        <th>Capacité</th>
+        <th>Statut</th>
+        <th>Date Modification</th>
+        <th>GPS</th>
+        <th>Position</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in camions">
+        <td>{{p.idcamion}}</td>
+        <td>{{p.immatriculation}}</td>
+        <td>{{p.dom_camion}}</td>
+        <td>{{p.nom_type_fr}}</td>
+        <td>{{p.capacite_camion}}</td>
+        <td>{{p.nom_statut_fr}}</td>
+        <td>{{p.date_statut}}</td>
+        <td>{{p.gps_camion}}</td>
+        
+        <td ng-if="p.activ_gpscamion==true">
+            <a href="#/camions/gps/{{p.gps_camion}}" class="btn btn-link btn">
+            <span class="glyphicon glyphicon-screenshot"></span></a> 
+        </td>
+        <td ng-if="p.activ_gpscamion==false">non</td>
+
+        <td ng-if="p.desact_camion==true">désactivé</td>
+        <td ng-if="p.desact_camion==false">actif</td> 
+
+        <td>
+            <a href="#/camions/editer/{{p.idcamion}}" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span></a>
+            <button class="btn btn-danger btn-xs" ng-click="delete(p.idcamion)">
+            <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

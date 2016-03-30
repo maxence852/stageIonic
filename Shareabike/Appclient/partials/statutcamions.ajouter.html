@@ -1,0 +1,18 @@
+<div class="container" ng-controller="StatutcamionPostCtrl">
+ 
+    <h3>Nouveau statut de camion</h3>
+    <p>* champs obligatoires</p>
+    <form>
+        <div class="form-group">
+            <label for="inputN">ID *</label>
+            <input type:'text' class="form-control" id="inputN" placeholder="identifiant (chifre)" ng-model="post.idstatutcamion">
+        </div>
+        <div class="form-group">
+            <label for="inputstatutcamion">Statut *</label>
+            <input type:'text' class="form-control" id="inputstatutcamion" placeholder="statut de camion" ng-model="post.nom_statut_fr">
+        </div>
+        
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

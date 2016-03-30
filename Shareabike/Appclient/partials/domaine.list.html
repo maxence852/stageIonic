@@ -1,0 +1,43 @@
+<div class="container" ng-controller="DomaineGetCtrl">
+  <div class="page-header">
+    <h3>Domaines </h3>
+  </div>
+  <a href="#/domaines/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Tel</th>
+        <th>Puce gps</th>
+        <th>gps camion</th>
+        <th>Position</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in domaines">
+        <td>{{p.iddomaine}}</td>
+        <td>{{p.tel_service}}</td>
+        <td ng-if="p.activ_pucegps==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="p.activ_pucegps==false">non</td>
+
+        <td ng-if="p.activ_gpscamion==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="p.activ_gpscamion==false">non</td>
+        <td>
+          <a href="#/domaines/carte/{{p.iddomaine}}" class="btn btn-link btn"> Carte
+          <span class="glyphicon glyphicon-screenshot"></span></a>         
+        </td>        
+
+        <td ng-if="p.desact_domaine==true">désactivé</td>
+        <td ng-if="p.desact_domaine==false">actif</td> 
+        <td>
+          <a href="#/domaines/editer/{{p.iddomaine}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.iddomaine)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

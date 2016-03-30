@@ -1,0 +1,53 @@
+<div class="container" ng-controller="OperTarifPostCtrl">
+ 
+    <h3>Nouveau tarif</h3>
+    <p>* champs obligatoires</p>
+    <form>
+        <div class="form-group">
+            <label for="inputNom">Nom *</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="nom de tarif" ng-model="post.nom_tarif">
+        </div>
+       <div class="form-group">
+            <label for="inputCap">Durée gratuit</label>
+            <input type:'text' class="form-control" id="inputCap" placeholder="duree_gratuit" ng-model="post.duree_gratuit">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV">Prix 1</label>
+            <input type:'text' class="form-control" id="inputLimiteV" placeholder="prix_1" ng-model="post.prix_1">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Durée 1</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="duree_1" ng-model="post.duree_1">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV2">Prix 2</label>
+            <input type:'text' class="form-control" id="inputLimiteV2" placeholder="prix_2" ng-model="post.prix_2">
+        </div>
+       <div class="form-group">
+            <label for="inputBp2">Durée 2</label>
+            <input type:'text' class="form-control" id="inputBp2" placeholder="duree_2" ng-model="post.duree_2">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV3">Prix 3</label>
+            <input type:'text' class="form-control" id="inputLimiteV3" placeholder="prix_3" ng-model="post.prix_3">
+        </div>
+       <div class="form-group">
+            <label for="inputBp3">Durée 3</label>
+            <input type:'text' class="form-control" id="inputBp3" placeholder="duree_3" ng-model="post.duree_3">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteP">Prix plus</label>
+            <input type:'text' class="form-control" id="inputLimiteP" placeholder="prix plus: si durée > Durée 3 " ng-model="post.prix_plus">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Prix de reservation</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="prix_reservation" ng-model="post.prix_reservation">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">Description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="description" ng-model="post.descript_tarif">
+        </div>
+        <button  type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

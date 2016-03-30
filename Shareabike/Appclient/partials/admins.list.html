@@ -1,0 +1,48 @@
+<div class="container" ng-controller="AdminGetCtrl">
+  <div class="page-header">
+    <h3>Administrateurs</h3>
+  </div>
+  <a href="#/admins/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Identifiant</th>
+        <th>Adresse</th>
+        <th>CP</th>
+        <th>Ville</th>
+        <th>Pays</th>
+        <th>Tel.</th>
+        <th>Rôle</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in users">
+        <td>{{p.idadmin}}</td>
+        <td>{{p.nom}}</td>
+        <td>{{p.login}}</td>
+        <td>{{p.adresse}}</td>
+        <td>{{p.cpville}}</td>
+        <td>{{p.nomville}}</td>
+        <td>{{p.codepays}}</td>
+        <td>{{p.tel}}</td>
+        <td>{{p.nom_fr}}</td>
+        <!--         
+        <td>{{p.desact}}</td>
+     -->
+        <td ng-if="p.desact==true">désactivé</td>
+        <td ng-if="p.desact==false">actif</td> 
+
+        <td>
+          <a href="#/admins/editer/{{p.idadmin}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idadmin)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

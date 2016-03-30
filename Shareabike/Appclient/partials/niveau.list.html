@@ -1,0 +1,29 @@
+<div class="container" ng-controller="NiveauGetCtrl">
+  <div class="page-header">
+    <h3>Rôles</h3>
+  </div>
+  <a href="#/niveau/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>niveau</th>
+        <th>Rôle</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in niveaus">
+        <td>{{p.idtype}}</td>
+        <td>{{p.niveau}}</td>
+        <td>{{p.nom_fr}}</td>
+        <td>
+          <a href="#/niveau/editer/{{p.idtype}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idtype)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

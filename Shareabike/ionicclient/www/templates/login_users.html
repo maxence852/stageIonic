@@ -1,0 +1,147 @@
+<ion-view view-title="Login">
+<ion-pane>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">login</span>
+        <input type="text" id="username" placeholder="Nom" ng-model="login.username">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Password</span>
+        <input type="password" id="password" placeholder="Password" ng-model="login.password" ng-minlength="3">
+      </label>
+      <div class="padding">
+        <!--<button ui-sref= "#/app/menu3" ng-disabled="!email || !password" class="button button-block button-balanced">Se connecter</button>-->
+
+
+        <!--<input type="button" ng-click="validate()" ng-disabled="!name|| !password " class="button button-block button-balanced"value="Se connecter" onclick="self.location.href='#/app/menu3'"/>-->
+        <button type="button" ng-click="login()" ng-disabled="!login.username|| !login.password " class="button button-block button-balanced">Se connecter</button>
+      </div>
+
+      <div class="padding">
+        <input type="button" class="button button-block button-balanced"value="S'enregistrer" onclick="self.location.href='#/app/register1'"/>
+      </div>
+    </div>
+  </ion-content>
+</ion-pane>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ion-modal-view>
+  <div class="tabs-striped tabs-background-assertive tabs-colorlight">
+    <div class="tabs">
+      <a class="tab-item" ng-class="{active : viewLogin}"
+         href="javascript:" ng-click="switchTab('login')">
+        <i class="icon ion-locked"></i> Login
+      </a>
+      <a class="tab-item" ng-class="{active : !viewLogin}"
+         href="javascript:" ng-click="switchTab('register')">
+        <i class="icon ion-person-add"></i> Register
+      </a>
+    </div>
+  </div>
+
+  <ion-pane ng-show="viewLogin">
+    <ion-header-bar>
+      <h1 class="title">Login</h1>
+      <div class="buttons">
+        <button class="button button-assertive" ngclick="hide()">Close</button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <form>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input type="email" ng-model="user.email">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password" ngmodel="user.password">
+          </label>
+          <label class="item">
+            <button class="button button-block buttonassertive" ng-click="login()" ng-disabled="!user.email ||!user.password" type="submit">Log in</button>
+          </label>
+        </div>
+      </form>
+    </ion-content>
+  </ion-pane>
+
+  <ion-pane ng-hide="viewLogin">
+    <ion-header-bar>
+      <h1 class="title">Register</h1>
+      <div class="buttons">
+        <button class="button button-assertive" ngclick="hide()">Close</button>
+      </div>
+    </ion-header-bar>
+    <ion-content>
+      <form>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Name</span>
+            <input type="text" ng-model="user.name">
+          </label>
+          <label class="item item-input">
+<span class="input-label">Email Address</span>
+            <input type="text" ng-model="user.email">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Password</span>
+            <input type="password" ngmodel="user.password">
+          </label>
+          <label class="item">
+            <button class="button button-block buttonassertive" ng-click="register()" ng-disabled="!user.name || !user.email || !user.password" type="submit" type="submit">Register</button>
+          </label>
+        </div>
+      </form>
+    </ion-content>
+  </ion-pane>
+</ion-modal-view>-->
+
+
+
+
+
+
+
+
+
+<!--<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button ng-disabled="!loginData.username || !loginData.password" class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>-->

@@ -1,0 +1,35 @@
+<div class="container" ng-controller="OperCommentaireGetCtrl">
+  <div class="page-header">
+    <a  href="#/oper/clients/editer/{{client}}" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a>    
+    <h3>Commentaires pour l'utilisateur: {{client}} </h3>
+  </div>
+  <a href="#/oper/commentaires/ajouter/{{client}}" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>Date</th>
+        <th>Expéditeur</th>
+        <th>Domaine</th>
+        <th>Commentaire</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in commentaires">
+        <td>{{p.date_post}}</td>
+ 
+        <td ng-if="p.expediteur_admin != null">{{p.expediteur_admin}}</td>
+        <td ng-if="p.expediteur_client != null">{{p.expediteur_client}}</td> 
+
+        <td>{{p.dom_commentaire}}</td>
+        <td>{{p.commentaire}}</td>
+
+        <td>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idcommentaire)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+
+      </tr>
+    </table>
+  </p>
+
+</div>

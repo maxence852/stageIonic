@@ -1,0 +1,55 @@
+<div class="container" ng-controller="ClientPostCtrl">
+ 
+    <h3>Nouvel utilisateur</h3>
+    <p>* champs obligatoires</p>
+    <form>
+        <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder='nom' ng-model="post.nom_client">
+        </div>
+        <div class="form-group">
+            <label for="inputpNom">Prénom</label>
+            <input type:'text' class="form-control" id="inputpNom" placeholder='nom' ng-model="post.prenom_client">
+        </div>
+        <div class="form-group">
+            <label for="inputAdresse">Adresse</label>
+            <input type:'text' class="form-control" id="inputAdr" placeholder='adresse' ng-model="post.adresse_client">
+        </div>
+        <div class="form-group" >
+            <label for="inputUserVilleList">Sélectionez une Ville</label>
+            <select class="form-control" ng-model="ville_selection" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputGsm">GSM</label>
+            <input type:'text' class="form-control" id="inputGsm" placeholder='gsm' ng-model="post.gsm_client">
+        </div>
+        <div class="form-group">
+            <label for="inputPin">Pin code</label>
+            <input type:'text' class="form-control" id="inputPin" placeholder="numero de pin code" ng-model="post.pin_code">
+        </div>     
+        <div class="form-group">
+            <label for="inputLog">Identifiant *</label>
+            <input type:'text' class="form-control" id="inputLog" placeholder="login" ng-model="post.login_client">
+        </div>
+        <div class="form-group">
+            <label for="inputPass">Mot de passe *</label>
+            <input type="password" class="form-control" id="inputPass" placeholder="mot de passe (min. 8 caractères )" ng-model="post.password_client">
+        </div>
+        <div class="form-group" >
+            <label for="inputUserNivList">Selectionnez le Statut :</label>
+            <select class="form-control" ng-model="statutclient_selection" ng-options="statutclient as (statutclient.nom_statut_fr) for statutclient in statutclients">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputSolde">Solde</label>
+            <input type:'text' class="form-control" id="inputSolde" placeholder="montant débité (positif) ou crédité (négatif) " ng-model="post.solde_montant">
+        </div>        
+        <div class="form-group">
+            <label for="inputBonus">Bonus</label>
+            <input type:'text' class="form-control" id="inputBonus" placeholder="bonus débité (positif) ou crédité (négatif)" ng-model="post.solde_bonus">
+        </div> 
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

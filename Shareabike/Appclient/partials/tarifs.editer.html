@@ -1,0 +1,57 @@
+<div class="container" ng-controller="TarifEditCtrl">
+ 
+    <h3>Modification de tarif: <code>{{post.idtarif}}</code></h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputNom">Nom *</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="{{post.nom_tarif}}" ng-model="post.nom_tarif">
+        </div>
+       <div class="form-group">
+            <label for="inputCap">Durée gratuit</label>
+            <input type:'text' class="form-control" id="inputCap" placeholder="{{duree_gratuit}}" ng-model="post.duree_gratuit">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV">Prix 1</label>
+            <input type:'text' class="form-control" id="inputLimiteV" placeholder="{{post.prix_1}}" ng-model="post.prix_1">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Furee 1</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="{{post.duree_1}}" ng-model="post.duree_1">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV2">Prix 2</label>
+            <input type:'text' class="form-control" id="inputLimiteV2" placeholder="{{post.prix_2}}" ng-model="post.prix_2">
+        </div>
+       <div class="form-group">
+            <label for="inputBp2">Duree 2</label>
+            <input type:'text' class="form-control" id="inputBp2" placeholder="{{post.duree_2}}" ng-model="post.duree_2">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV3">Prix 3</label>
+            <input type:'text' class="form-control" id="inputLimiteV3" placeholder="{{post.prix_3}}" ng-model="post.prix_3">
+        </div>
+       <div class="form-group">
+            <label for="inputBp3">Duree 3</label>
+            <input type:'text' class="form-control" id="inputBp3" placeholder="{{post.duree_3}}" ng-model="post.duree_3">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteP">Prix plus</label>
+            <input type:'text' class="form-control" id="inputLimiteP" placeholder="{{post.prix_plus}}" ng-model="post.prix_plus">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Prix de reservation</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="{{post.prix_reservation}}" ng-model="post.prix_reservation">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="{{post.descript_tarif}}" ng-model="post.descript_tarif">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact_tarif" value="true">Desactiver le Tarif</label>
+        </div>
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

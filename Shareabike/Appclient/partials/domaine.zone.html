@@ -1,0 +1,53 @@
+<div class="container" ng-controller="DomaineZoneCtrl">
+  <div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Tel</th>
+        <!--
+        <th>fixe/virtuelle</th>
+      -->
+        <th>Puce gps</th>
+        <th>gps camion</th>
+        <th>Statut</th>
+        <th>Action</th>
+      </tr>
+
+        <td>{{post.iddomaine}}</td>
+        <td>{{post.tel_service}}</td>
+
+        <td ng-if="post.activ_pucegps==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="post.activ_pucegps==false">non</td>
+
+        <td ng-if="post.activ_gpscamion==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="post.activ_gpscamion==false">non</td>
+
+        <td ng-if="post.desact_domaine==true">désactivé</td>
+        <td ng-if="post.desact_domaine==false">actif</td> 
+
+        <td>
+          <a href="#/domaines/editer/{{post.iddomaine}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+
+    </table>
+  </p>
+  </div>
+
+    <div class="mapCanvas">
+        <ui-gmap-google-map
+                center='map.center'
+                zoom='map.zoom'
+                draggable="map.draggable"
+                options="options">
+
+            <ui-gmap-drawing-manager 
+                options="drawingManagerOptions"
+                events="drawingManagerEvents">
+            </ui-gmap-drawing-manager>
+    
+        </ui-gmap-google-map>
+
+    </div>
+</div>

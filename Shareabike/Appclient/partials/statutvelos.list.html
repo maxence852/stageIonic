@@ -1,0 +1,27 @@
+<div class="container" ng-controller="StatutveloGetCtrl">
+  <div class="page-header">
+    <h3>Statut de vélo</h3>
+  </div>
+  <a href="#/statutvelos/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Statut</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in statutvelos">
+        <td>{{p.idstatutvelo}}</td>
+        <td>{{p.nom_statut_fr}}</td>
+        <td>
+          <a href="#/statutvelos/editer/{{p.idstatutvelo}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idstatutvelo)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

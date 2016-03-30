@@ -1,0 +1,18 @@
+<div class="container" ng-controller="StatutcamionEditCtrl">
+ 
+    <h3>Modification</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputNi">ID</label>
+            <input type:'text' class="form-control" id="inputNi" placeholder='{{post.idstatutcamion}}'  ng-model="post.idstatutcamion">
+        </div>
+        <div class="form-group">
+            <label for="inputnom">Statut de camion</label>
+            <input type:'text' class="form-control" id="inputnom" placeholder="{{post.nom_statut_fr}}" ng-model="post.nom_statut_fr">
+        </div>
+       
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

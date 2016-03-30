@@ -1,0 +1,41 @@
+<div class="container" ng-controller="DepotGetCtrl">
+  <div class="page-header">
+    <h3>Dépôts</h3>
+  </div>
+  <a href="#/depots/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>Adresse</th>
+        <th>Tel.</th>
+        <th>Position</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in depots">
+        <td>{{p.iddepot}}</td>
+        <td>{{p.dom_depot}}</td>
+        <td>{{p.adresse}}</td>
+        <td>{{p.tel}}</td>
+        <td>
+          <a href="#/depots/carte/{{p.dom_depot}}/{{p.iddepot}}" class="btn btn-link btn"> Carte
+          <span class="glyphicon glyphicon-screenshot"></span></a>         
+        </td>         
+        <td>{{p.position_depot.x}}</td>
+        <td>{{p.position_depot.y}}</td>
+
+        <td>
+            <a href="#/depots/editer/{{p.iddepot}}" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span></a>
+            <button class="btn btn-danger btn-xs" ng-click="delete(p.iddepot)">
+            <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

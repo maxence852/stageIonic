@@ -1,0 +1,46 @@
+<div class="container" ng-controller="DepotEditCtrl">
+ 
+    <h3>Modification</h3>
+    
+    <form> 
+        <div class="form-group" >
+            <label for="inputDomaineList">Sélectionez un Domaine *</label>
+            <select class="form-control" ng-model="domaine_selection" ng-options="domaine as (domaine.iddomaine)  for domaine in domaines">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputAdr">Adresse</label>
+            <input type:'text' class="form-control" id="inputAdr" placeholder='{{post.adresse}}' ng-model="post.adresse">
+        </div>
+        <div class="form-group">
+            <label for="inputT">Téléphone</label>
+            <input type:'text' class="form-control" id="inputT" placeholder='{{post.tel}}' ng-model="post.tel">
+        </div>
+        <div class="form-group">
+            <label for="inputCap">Capacité en camions *</label>
+            <input type:'text' class="form-control" id="inputCap" placeholder='{{post.capacite_camion}}' ng-model="post.capacite_camion">
+        </div>
+        <div class="form-group">
+            <label for="inputCapv">Capacité en vélos</label>
+            <input type:'text' class="form-control" id="inputCapv" placeholder='{{post.capacite_velo}}' ng-model="post.capacite_velo">
+        </div>
+        <div class="form-group">
+            <label for="inputp">Position:</label>
+            <a href="#/depots/point/{{post.dom_depot}}/{{post.iddepot}}" class="btn btn-link btn" >  modifier sur la carte
+            <span class="glyphicon glyphicon-screenshot"></span></a> 
+            <input type:'text' class="form-control" id="inputp" placeholder="{{post.position_depot}}" ng-model="post.position_depot">
+        </div>
+<!--        
+        <div class="form-group">
+            <label for="inputl">Latitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputl" placeholder="{{post.position_depot.x}}" ng-model="post.position_depot.x">
+        </div>       
+        <div class="form-group">
+            <label for="inputll">Longitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputll" placeholder="{{post.position_depot.y}}" ng-model="post.position_depot.y">
+        </div> 
+-->
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

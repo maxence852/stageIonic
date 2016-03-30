@@ -1,0 +1,78 @@
+<div class="container" ng-controller="StationZoneCtrl">
+  <div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>Nom</th>
+        <th>Type</th>
+        <th>Capacité</th>
+        <th>Limite vide</th>
+        <th>Bonus+</th>
+        <th>Limite pleine</th>
+        <th>Bonus-</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+
+        <td>{{post.idstation}}</td>
+        <td>{{post.dom_station}}</td>
+        <td>{{post.nom_station}}</td>
+        <td ng-if="post.fixe_virtuelle==true">virtuelle</td>
+        <td ng-if="post.fixe_virtuelle==false">fixe</td>
+        <td>{{post.capacite_optimum}}</td>
+        <td>{{post.limite_vide}}</td>
+        <td>{{post.bonus_ajouter}}</td>
+        <td>{{post.limite_pleine}}</td>
+        <td>{{post.bonus_enlever}}</td>
+ 
+        <td ng-if="post.desact_station==true">désactivé</td>
+        <td ng-if="post.desact_station==false">actif</td> 
+
+        <td>
+          <a href="#/stations/editer/{{post.idstation}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+
+    </table>
+  </p>
+  </div>
+
+    <div class="mapCanvas">
+        <ui-gmap-google-map
+                center='map.center'
+                zoom='map.zoom'
+                draggable="map.draggable"
+                options="options">
+            <ui-gmap-polyline  
+                path="polyline.path" 
+                stroke="polyline.stroke" 
+                visible='polyline.visible'
+                geodesic='polyline.geodesic' 
+                fit="false" 
+                editable="false" 
+                draggable="polyline.draggable" 
+                icons='polyline.icons'>
+            </ui-gmap-polyline>
+            <ui-gmap-polygon
+                ng-repeat="p in polygons track by p.id" 
+                path="p.path" 
+                static="true" 
+                stroke="p.stroke" 
+                visible="p.visible"
+                geodesic="p.geodesic" 
+                fill="p.fill" 
+                fit="false" 
+                editable="p.editable" 
+                draggable="p.draggable">
+            </ui-gmap-polygon>            
+            <ui-gmap-drawing-manager 
+                options="drawingManagerOptions"
+                events="drawingManagerEvents">
+            </ui-gmap-drawing-manager>
+    
+        </ui-gmap-google-map>
+
+    </div>
+</div>

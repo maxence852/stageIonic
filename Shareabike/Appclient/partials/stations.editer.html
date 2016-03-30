@@ -1,0 +1,53 @@
+<div class="container" ng-controller="StationEditCtrl">
+ 
+    <h3>Modification de la station: <code>{{post.idstation}}</code></h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputpolygon">Zone: </label>
+            <a href="#/stations/zone/{{post.dom_station}}/{{post.idstation}}" class="btn btn-link btn" >  dessiner sur la carte
+            <span class="glyphicon glyphicon-screenshot"></span></a>             
+            <input type:'text' class="form-control" id="inputpolygon" placeholder='{{post.zone_station}}' ng-model="post.zone_station">
+        </div>
+        <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="{{post.nom_station}}" ng-model="post.nom_station">
+        </div>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="optradio" ng-model="post.fixe_virtuelle" value="false">Fixe</label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" ng-model="post.fixe_virtuelle" value="true">Virtuelle</label>
+         </div>
+       <div class="form-group">
+            <label for="inputCap">Capacité</label>
+            <input type:'text' class="form-control" id="inputCap" placeholder="{{post.capacite_optimum}}" ng-model="post.capacite_optimum">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV">Limite vide</label>
+            <input type:'text' class="form-control" id="inputLimiteV" placeholder="{{post.limite_vide}}" ng-model="post.limite_vide">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Bonus+</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="{{post.bonus_ajouter}}" ng-model="post.bonus_ajouter">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteP">Limite pleine</label>
+            <input type:'text' class="form-control" id="inputLimiteP" placeholder="{{post.limite_pleine}}" ng-model="post.limite_pleine">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Bonus-</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="{{post.bonus_enlever}}" ng-model="post.bonus_enlever">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="{{post.descript_station}}" ng-model="post.descript_station">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact_station" value="true">Desactiver la Station</label>
+        </div>
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="container" ng-controller="LocationencoursGetCtrl">
+  <div class="page-header">
+    <a  href="#/locationfinies" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a> 
+    <h3>Locations en cours</h3>
+  </div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>ID vélo</th>
+        <th>N client</th>
+        <th>Nom client</th>
+        <th>Date de debut</th>
+        <th>Station de depart</th>
+        <th>Détail</th>
+      </tr>
+      <tr ng-repeat="p in locations">
+        <td>{{p.idlocation}}</td>
+        <td>{{p.dom_location}}</td>
+        <td>{{p.velo_location}}</td>
+        <td>{{p.client_location}}</td>
+        <td>{{p.nom_client}}</td>
+        <td>{{p.date_debut}}</td>
+        <td>{{p.station_debut}}</td>
+
+        <td>
+            <a href="#/locationencours/detail/{{p.idlocation}}" class="btn btn-info btn-xs">
+            <span class="glyphicon glyphicon-new-window"></span></a>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

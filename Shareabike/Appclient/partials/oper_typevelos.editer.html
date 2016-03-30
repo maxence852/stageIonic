@@ -1,0 +1,37 @@
+<div class="container" ng-controller="OperTypeveloEditCtrl">
+ 
+    <h3>Modification de type de vélo: <code>{{post.idtypevelo}}</code></h3>
+    <div style="text-align: right">
+        <img ng-src="{{post.uri_photovelo}}" class="img-thumbnail" alt="image" width="184" height="116">
+    </div> 
+    <form>
+        <div class="form-group" >
+            <label for="inputTarifList">Sélectionez un Tarif *</label>
+            <select class="form-control" ng-model="tarif_selection" ng-options="tarif as (tarif.idtarif + ' ' + tarif.dom_tarif + ' ' + tarif.nom_tarif)  for tarif in tarifs">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputNom">Nom *</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="{{post.nom_type_fr}}" ng-model="post.nom_type_fr">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.reservation_possible" value="true">Possibilité de la réservation</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.avertir_sidisponible" value="true">Possibilité d'être averti en cas de disponibilité de ce type de vélos</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.deposer_station" value="true">Obligation de déposer ce type de vélo à une zone de la station</label>
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">Description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="{{post.descript_type}}" ng-model="post.descript_type">
+        </div>
+        <div class="form-group">
+            <label for="inputUri">URI Photo de vélo</label>
+            <input type:'text' class="form-control" id="inputUri" placeholder='/image/default.jpg' ng-model="post.uri_photovelo">
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

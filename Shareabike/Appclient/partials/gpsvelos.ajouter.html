@@ -1,0 +1,18 @@
+<div class="container" ng-controller="GpsveloPostCtrl">
+ 
+    <h3>Nouvelle position de vélo</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputN">GPS</label>
+            <input type:'text' class="form-control" id="inputN" placeholder="identifiant GPS" ng-model="post.pucegps">
+        </div>
+        <div class="form-group">
+            <label for="inputp">Position</label>
+            <input type:'text' class="form-control" id="inputp" placeholder="(latitude, longitude) format ex:(50.42134, 3.61226)" ng-model="post.position">
+        </div>
+        
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

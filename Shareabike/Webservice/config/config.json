@@ -1,0 +1,9 @@
+{
+  "port": 80,
+  "db": "postgres://postgres:mons2015@localhost/shareabike",
+  "tls": {
+  	"key": "./config/server.enc.key",
+  	"crt": "./config/server.crt",
+  	"pas": "mons2015"
+  }
+}

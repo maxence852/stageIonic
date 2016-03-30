@@ -1,0 +1,31 @@
+<div class="container" ng-controller="VilleGetCtrl">
+  <div class="page-header">
+    <h3>Villes </h3>
+  </div>
+  <a href="#/villes/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>CP</th>
+        <th>Nom</th>
+        <th>Pays</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in villes">
+        <td>{{p.idville}}</td>
+        <td>{{p.cpville}}</td>
+        <td>{{p.nomville}}</td>
+        <td>{{p.codepays}}</td>
+        <td>
+          <a href="#/villes/editer/{{p.idville}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idville)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

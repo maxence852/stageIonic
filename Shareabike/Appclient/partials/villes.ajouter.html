@@ -1,0 +1,25 @@
+<div class="container" ng-controller="VillePostCtrl">
+ 
+    <h3>Nouvelle ville</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputCp">CP</label>
+            <input type:'text' class="form-control" id="inputCp" placeholder="code postal" ng-model="post.cpville">
+        </div>
+        <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="nom" ng-model="post.nomville">
+        </div>
+        <div class="form-group" >
+            <label for="inputPaysList">Sélectionez un Pays</label>
+            <select class="form-control" ng-model="pays_selection" ng-options="pays as (pays.nom_fr) for pays in payss | orderBy: 'nom_fr' ">
+<!--             <option value="">Sélectionez </option> -->
+            </select>
+        </div>
+
+        
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

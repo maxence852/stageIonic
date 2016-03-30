@@ -1,0 +1,35 @@
+<div class="container" ng-controller="GpsveloGetCtrl">
+  <div class="page-header">
+    <h3>GPS de vélo</h3>
+  </div>
+  <a href="#/gpsvelos/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>GPS</th>
+        <th>Date</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in gpsvelos">
+        <td>{{p.idgpsvelo}}</td>
+        <td>{{p.dom_velo}}</td>
+        <td>{{p.pucegps}}</td>
+        <td>{{p.date_position}}</td>
+        <td>{{p.position.x}}</td>
+        <td>{{p.position.y}}</td>
+        <td>
+          <a href="#/gpsvelos/editer/{{p.idgpsvelo}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idgpsvelo)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

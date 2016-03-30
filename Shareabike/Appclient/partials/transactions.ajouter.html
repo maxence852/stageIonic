@@ -1,0 +1,36 @@
+<div class="container" ng-controller="TransactionPostCtrl">
+ 
+    <h3>Nouvelle transaction</h3>
+    <p>* champs obligatoires</p>
+    <form> 
+        <div class="form-group" >
+            <label for="inputUserDmnList">Sélectionez le domaine *</label>
+            <select class="form-control" ng-model="domaine_selection" ng-options="domaine.iddomaine for domaine in domaines">
+            </select>
+        </div>
+
+        <div class="form-group" >
+            <label for="inputClientList">Sélectionez l'utilisateur concerné *</label>
+            <select class="form-control" ng-model="client_selection" ng-options="client as (client.idclient + ' ' + client.nom_client)  for client in clients ">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputLoc">Identifiant de location</label>
+            <input type:'text' class="form-control" id="inputLoc" placeholder="identifiant de location, s'il s'agit d'enregistrement  d'une location" ng-model="post.location">
+        </div>
+        <div class="form-group">
+            <label for="inputM">Montant *</label>
+            <input type:'text' class="form-control" id="inputp" placeholder="montant débité (positif) ou crédité (négatif)" ng-model="post.montant">
+        </div>
+        <div class="form-group">
+            <label for="inputB">Bonus</label>
+            <input type:'text' class="form-control" id="inputB" placeholder="nombre de points ajoutés(en positif) ou enlevés(en négatif)" ng-model="post.bonus">
+        </div>
+        <div class="form-group">
+            <label for="inputJ">Justification *</label>
+            <input type:'text' class="form-control" id="inputJ" placeholder='justification de la transaction' ng-model="post.justification">
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

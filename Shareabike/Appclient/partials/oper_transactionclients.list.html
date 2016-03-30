@@ -1,0 +1,33 @@
+<div class="container" ng-controller="OperTransactionClientCtrl">
+  <div class="page-header">
+    <a  href="#/oper/clients/editer/{{client}}" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a>
+    <h3>Transactions d'utilisateur: <code>{{client}}</code> </h3>
+  </div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>Montant</th>
+        <th>Bonus</th>
+        <th>Date</th>
+        <th>Ajouté par</th>
+        <th>Détail</th>
+      </tr>
+      <tr ng-repeat="p in transactions">
+        <td>{{p.idtransaction}}</td>
+        <td>{{p.dom_transaction}}</td>
+        <td>{{p.montant}}</td>
+        <td>{{p.bonus}}</td>
+        <td>{{p.date_transaction}}</td>
+        <td>{{p.nom}}</td>
+
+        <td>
+            <a href="#/oper/transactions/detail/{{p.idtransaction}}" class="btn btn-info btn-xs">
+            <span class="glyphicon glyphicon-new-window"></span></a>
+        </td>        
+      </tr>
+    </table>
+  </p>
+
+</div>

@@ -1,0 +1,89 @@
+<div class="container" ng-controller="OperRapportCtrl">
+  <div class="page-header">
+     <h3>Rapport </h3>
+  </div>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <label for="inputD1">Période de :</label>
+        <input type:'text' class="form-control" id="inputD1" placeholder='AAAA-MM-JJ' ng-model="post.date1">
+    </div>
+    <div class="form-group">
+      <label for="inputD1"> à :</label>
+        <input type:'text' class="form-control" id="inputD2" placeholder='AAAA-MM-JJ' ng-model="post.date2">
+    </div>
+    <button type="submit" class="btn btn-success" ng-click="calculer(post)">Calculer</button>
+</form>
+              
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>Nombre de stations</th>
+        <th>Fixes</th>
+        <th>Virtuelles</th>
+        <th>Nombre d'utilisateurs</th>
+      </tr>
+      <tr ng-repeat="p in rapports">
+        <td>{{p.station_total}}</td>
+        <td>{{p.station_fixe}}</td>
+        <td>{{p.station_virtuelle}}</td>
+        <td>{{p.client_total}}</td>
+      </tr>
+    </table>
+  </p>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>Nombre de vélos</th>
+        <th>Nombre de types de vélos</th>
+        <th>disponible</th>
+        <th>location</th>
+        <th>réservé</th>
+        <th>distribution</th>
+        <th>en panne</th>
+        <th>en entretient</th>
+        <th>volé</th>
+      </tr>
+      <tr ng-repeat="p in rapports">
+        <td>{{p.velo_total}}</td>
+        <td>{{p.velo_type}}</td>
+        <td>{{p.velo_disponible}}</td>
+        <td>{{p.velo_location}}</td>
+        <td>{{p.velo_reserve}}</td>
+        <td>{{p.velo_distribution}}</td>
+        <td>{{p.velo_panne}}</td>
+        <td>{{p.velo_entretient}}</td>
+        <td>{{p.velo_vole}}</td>
+      </tr>
+    </table>
+  </p>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>Nombre de locations</th>
+        <th>Durée</th>
+        <th>Nombre de transactions</th>
+        <th>automatique</th>
+        <th>manuelle</th>
+        <th>Montant débité</th>
+        <th>Montant crédité</th>
+        <th>Bonus débité </th>
+        <th>Bonus crédité</th>
+      </tr>
+      <tr ng-repeat="p in rapports">
+        <td>{{p.location_total}}</td>
+        <td>{{p.location_duree}}</td>
+        <td>{{p.transaction_total}}</td>
+        <td>{{p.transaction_automatique}}</td>
+        <td>{{p.transaction_manuelle}}</td>
+        <td>{{p.transaction_montant_debit}}</td>
+        <td>{{p.transaction_montant_credit}}</td>
+        <td>{{p.transaction_bonus_debit}}</td>
+        <td>{{p.transaction_bonus_credit}}</td>
+      </tr>
+    </table>
+  </p>
+
+
+</div>

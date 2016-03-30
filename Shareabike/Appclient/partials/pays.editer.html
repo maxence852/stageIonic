@@ -1,0 +1,18 @@
+<div class="container" ng-controller="PaysEditCtrl">
+ 
+    <h3>Modification</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputPays">Code</label>
+            <input type:'text' class="form-control" id="inputPays" placeholder='{{post.idpays}}'  ng-model="post.idpays">
+        </div>
+        <div class="form-group">
+            <label for="inputPays_nom">Nom</label>
+            <input type:'text' class="form-control" id="inputPays_nom" placeholder="{{post.nom_fr}}" ng-model="post.nom_fr">
+        </div>
+       
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

@@ -1,0 +1,44 @@
+<div class="container" ng-controller="BonustrajetGetCtrl">
+  <div class="page-header">
+    <h3>Trajets Bonus</h3>
+  </div>
+  <a href="#/bonustrajets/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID trajet</th>
+        <th>Domaine</th>
+        <th>ID</th>
+        <th>Station de départ</th>
+        <th>ID</th>
+        <th>Station d'arrivée</th>
+        <th>Date de validité</th>
+        <th>Bonus</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in bonustrajets">
+        <td>{{p.idbonustrajet}}</td>
+        <td>{{p.dom_bonustrajet}}</td>
+        <td>{{p.station_depart}}</td>
+        <td>{{p.nom_station_depart}}</td>
+        <td>{{p.station_arriver}}</td>
+        <td>{{p.nom_station_arriver}}</td>
+        <td>{{p.date_valable}}</td>
+        <td>{{p.montant_bonus}}</td>
+        
+        <td ng-if="p.desact_bonustrajet==true">désactivé</td>
+        <td ng-if="p.desact_bonustrajet==false">actif</td> 
+
+        <td>
+            <a href="#/bonustrajets/editer/{{p.idbonustrajet}}" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span></a>
+            <button class="btn btn-danger btn-xs" ng-click="delete(p.idbonustrajet)">
+            <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

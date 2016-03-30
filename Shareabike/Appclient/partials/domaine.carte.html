@@ -1,0 +1,62 @@
+<div class="container" ng-controller="DomaineCarteCtrl">
+  <div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Tel</th>
+        <th>Puce gps</th>
+        <th>gps camion</th>
+        <th>Statut</th>
+        <th>Action</th>
+      </tr>
+
+        <td>{{post.iddomaine}}</td>
+        <td>{{post.tel_service}}</td>
+
+        <td ng-if="post.activ_pucegps==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="post.activ_pucegps==false">non</td>
+
+        <td ng-if="post.activ_gpscamion==true"><span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="post.activ_gpscamion==false">non</td>
+
+        <td ng-if="post.desact_domaine==true">désactivé</td>
+        <td ng-if="post.desact_domaine==false">actif</td> 
+
+        <td>
+          <a href="#/domaines/editer/{{post.iddomaine}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+
+    </table>
+  </p>
+  </div>
+
+    <div class="mapCanvas">
+        <ui-gmap-google-map
+                center='center'
+                zoom='map.zoom'
+                draggable="map.draggable"
+                options="options">
+            <ui-gmap-marker
+                    coords="marker.coords"
+                    options="marker.options"
+                    idkey="marker.id">
+            </ui-gmap-marker>
+            <ui-gmap-polygon 
+                static="true" 
+                path="polygone.path" 
+                stroke="polygone.stroke" 
+                visible="polygone.visible"
+                geodesic="polygone.geodesic" 
+                fill="polygone.fill" 
+                fit="false" 
+                editable="polygone.editable" 
+                draggable="polygone.draggable">
+            </ui-gmap-polygon>
+
+
+        </ui-gmap-google-map>
+    </div>
+
+</div>

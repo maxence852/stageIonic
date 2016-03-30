@@ -1,0 +1,33 @@
+<div class="container" ng-controller="DomaineEditCtrl">
+ 
+    <h3>Modification du domaine: <code>{{post.iddomaine}}</code></h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputpolygondomaine">Zone: </label>
+            <a href="#/domaines/zone/{{post.iddomaine}}" class="btn btn-link btn" >  dessiner sur la carte
+            <span class="glyphicon glyphicon-screenshot"></span></a>             
+            <input type:'text' class="form-control" id="inputpolygondomaine" placeholder='{{post.zone_domaine}}' ng-model="post.zone_domaine">
+        </div>
+
+        <div class="form-group">
+            <label for="inputtelhelp">téléphone de service</label>
+            <input type:'text' class="form-control" id="inputtelhelp" placeholder='{{post.tel_service}}' ng-model="post.tel_service">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder='{{post.descript_domaine}}' ng-model="post.descript_domaine">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.activ_pucegps" value="true">Activer Puce GPS </label>
+        </div> 
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.activ_gpscamion" value="true">Activer GPS camion</label>
+        </div>  
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact_domaine" value="true">Desactiver le Domaine</label>
+        </div> 
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

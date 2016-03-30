@@ -1,0 +1,27 @@
+<div class="container" ng-controller="TypecamionGetCtrl">
+  <div class="page-header">
+    <h3>Type de camion</h3>
+  </div>
+  <a href="#/typecamions/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in typecamions">
+        <td>{{p.idtypecamion}}</td>
+        <td>{{p.nom_type_fr}}</td>
+        <td>
+          <a href="#/typecamions/editer/{{p.idtypecamion}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idtypecamion)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

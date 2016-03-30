@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Webservice</title>
+	<script language="javascript" type="text/javascript">
+		function ShowHide(id) {
+			var new_id = 'TXT_' + id;
+			if (document.getElementById(id).style.display == "none") {
+				document.getElementById(id).style.display = "block";
+				document.getElementById(new_id).innerHTML = "Fermer";
+			} else {
+				document.getElementById(id).style.display = "none";
+				document.getElementById(new_id).innerHTML = "Voir";
+			}
+		}
+	</script>
+	<style type="text/css">a:link{text-decoration:none}</style>
+</head>
+<body>
+	<table width="100%">
+		<tr>
+			<td colspan="4" align="center"><h1>Web Service RESTful ShareABike: Node.js + Express 4 + PostgreSQL + Authentification + Autorisation</h1></td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center">
+			<fieldset>
+			<legend>Convention</legend>
+			GET /resource -------> liste<br>
+			POST /resource -------> creation<br>
+			GET /resource/:id -------> affichage<br>
+			PUT /resource/:id ------->	modification<br>
+			DELETE /resource/:id ------> supression<br>
+			</fieldset>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

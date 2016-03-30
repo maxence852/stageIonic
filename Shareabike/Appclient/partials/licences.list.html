@@ -1,0 +1,41 @@
+<div class="container" ng-controller="LicenceGetCtrl">
+  <div class="page-header">
+    <h3 style="color:#088A08">Licences</h3>
+  </div>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Rôle</th>
+        <th>Domaine</th>
+        <th>Licence</th>
+        <th>Date début</th>
+        <th>Date fin</th>
+        <th>Délivré par</th>
+<!-- -->        
+        <th>Modifier</th> 
+      </tr>
+      <tr ng-repeat="p in licences">
+        <td>{{p.idadmin}}</td>
+        <td>{{p.nom}}</td>
+        <td>{{p.nom_fr}}</td>
+        <td>{{p.domaine}}</td>
+        <td>{{p.num_licence}}</td>
+        <td>{{p.date_sign}}</td>
+        <td>{{p.date_valid}}</td>
+        <td>{{p.delivre_par}}</td>
+<!--   -->      
+        <td>
+
+          <a href="#/licences/editer/{{p.idadmin}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+
+        </td>
+       
+      </tr>
+    </table>
+  </p>
+
+</div>

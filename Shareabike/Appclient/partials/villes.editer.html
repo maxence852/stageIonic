@@ -1,0 +1,23 @@
+<div class="container" ng-controller="VilleEditCtrl">
+ 
+    <h3>Modification</h3>
+ 
+        <div class="form-group">
+            <label for="inputCp">CP</label>
+            <input type:'text' class="form-control" id="inputCp" placeholder="{{post.cpville}}" ng-model="post.cpville">
+        </div>
+        <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="{{post.nomville}}" ng-model="post.nomville">
+        </div>
+        <div class="form-group" >
+            <label for="inputPaysList">Sélectionez un Pays</label>
+            <select class="form-control" ng-model="pays_selection" ng-options="pays as (pays.nom_fr) for pays in payss | orderBy: 'nom_fr' ">
+<!--             <option value="">Sélectionez </option> -->
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

@@ -1,0 +1,54 @@
+<div class="container" ng-controller="StationGetCtrl">
+  <div class="page-header">
+    <h3>Stations </h3>
+  </div>
+  <a href="#/stations/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>Nom</th>
+        <th>Type</th>
+        <th>Capacité</th>
+        <th>Limite vide</th>
+        <th>Bonus+</th>
+        <th>Limite pleine</th>
+        <th>Bonus-</th>
+        <th>Position</th>        
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in stations">
+        <td>{{p.idstation}}</td>
+        <td>{{p.dom_station}}</td>
+        <td>{{p.nom_station}}</td>
+        <td ng-if="p.fixe_virtuelle==true">virtuelle</td>
+        <td ng-if="p.fixe_virtuelle==false">fixe</td>
+        <td>{{p.capacite_optimum}}</td>
+        <td>{{p.limite_vide}}</td>
+        <td>{{p.bonus_ajouter}}</td>
+        <td>{{p.limite_pleine}}</td>
+        <td>{{p.bonus_enlever}}</td>
+
+        <td>
+          <a href="#/stations/carte/{{p.dom_station}}/{{p.idstation}}" class="btn btn-link btn"> Carte
+          <span class="glyphicon glyphicon-screenshot"></span></a>         
+        </td>                
+ 
+        <td ng-if="p.desact_station==true">désactivé</td>
+        <td ng-if="p.desact_station==false">actif</td> 
+
+        <td>
+          <a href="#/stations/editer/{{p.idstation}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idstation)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+
+      </tr>
+    </table>
+  </p>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="container" ng-controller="OperTransactionDetailCtrl">
+    <a  href="#/oper/transactions" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a> 
+    <h3>Détail de la transaction: <code>{{post.idtransaction}}</code> </h3>
+
+   <form class="form-horizontal" role="form"> 
+ 
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputN">Numéro de client</label>
+            <div class="col-sm-10">{{post.client_transaction}}
+                <a href="#/oper/clients/editer/{{post.client_transaction}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputL">Identifiant de location</label>
+            <div class="col-sm-10">{{post.location}}
+                <a href="#/oper/locationfinies/detail/{{post.location}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputD">Date</label>
+            <div class="col-sm-10">{{post.date_transaction}}<a class="btn btn-link">.</a>
+            </div>
+        </div>    
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputM">Montant</label>
+            <div class="col-sm-10">{{post.montant}}<a class="btn btn-link">.</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputB">Bonus</label>
+            <div class="col-sm-10">{{post.bonus}}<a class="btn btn-link">.</a> 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputNat">Nature de la transaction</label>
+            <div class="col-sm-10">
+                <p ng-if="post.nature_transaction==false">automatique</p>
+                <p ng-if="post.nature_transaction==true">manuelle</p>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputJ">Justification</label>
+            <div class="col-sm-10">{{post.justification}}<a class="btn btn-link">.</a>
+            </div>
+        </div>        
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputDuree">Ajouté par</label>
+            <div class="col-sm-10">ID: {{post.auteur}} ; Nom: {{post.nom}}<a class="btn btn-link">.</a>
+            </div>
+        </div>
+    </form>
+
+</div>

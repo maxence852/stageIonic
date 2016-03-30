@@ -1,0 +1,33 @@
+<div class="container" ng-controller="DomainePostCtrl">
+ 
+    <h3>Nouveau domaine</h3>
+    <p>* champs obligatoires</p>
+    <form>
+        <div class="form-group">
+            <label for="inputId">Id *</label>
+            <input type:'text' class="form-control" id="inputId" placeholder="max 5 caractères" ng-model="post.iddomaine">
+        </div>
+<!--
+        <div class="form-group">
+            <label for="inputpolygondomaine">Zone: polygon</label>
+            <input type:'text' class="form-control" id="inputpolygondomaine" placeholder="( ( x1 , y1 ) , ... , ( xn , yn ) )" ng-model="post.zone_domaine">
+        </div>
+-->
+        <div class="form-group">
+            <label for="inputtelhelp">téléphone de service</label>
+            <input type:'text' class="form-control" id="inputtelhelp" placeholder="numéro de service client" ng-model="post.tel_service">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="description" ng-model="post.descript_domaine">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.activ_pucegps" value="true">Activer Puce GPS </label>
+        </div> 
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.activ_gpscamion" value="true">Activer GPS camion</label>
+        </div> 
+        <button  type="submit" class="btn btn-success" ng-click="save(post, post.iddomaine)">Ajouter</button>
+    </form>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="container" ng-controller="OperVeloPostCtrl">
+ 
+    <h3>Nouveau Vélo</h3>
+    <p>* champs obligatoires</p>
+    <form> 
+        <div class="form-group" >
+            <label for="inputStationList">Sélectionez une Station *</label>
+            <select class="form-control" ng-model="station_selection" ng-options="station as (station.idstation + ' ' + station.nom_station + ' ' + station.dom_station)  for station in stations">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputTypeList">Sélectionez un Type de vélo *</label>
+            <select class="form-control" ng-model="typevelo_selection" ng-options="typevelo as (typevelo.idtypevelo + ' ' + typevelo.nom_type_fr + ' ' + typevelo.dom_typevelo)  for typevelo in typevelos">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputStatutList">Sélectionez un Statut de vélo *</label>
+            <select class="form-control" ng-model="statutvelo_selection" ng-options="statutvelo as (statutvelo.idstatutvelo + ' ' + statutvelo.nom_statut_fr)  for statutvelo in statutvelos">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="inputp">Position:</label>
+            <input type:'text' class="form-control" id="inputp" placeholder="(latitude, longitude)" ng-model="post.position_velo">
+        </div>
+        <div class="form-group">
+            <label for="inputc">Code cadenas classique/éléctronique </label>
+            <input type:'text' class="form-control" id="inputc" placeholder="chiffre" ng-model="post.code_cadenas">
+        </div>
+        <div class="form-group">
+            <label for="inputcpu">Puce GPS du vélo</label>
+            <input type:'text' class="form-control" id="inputcpu" placeholder="Numéro de la carte GSM, si la puce communique via GPRS/GSM" ng-model="post.pucegps_velo">
+        </div>
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

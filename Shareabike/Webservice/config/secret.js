@@ -1,0 +1,1 @@
+exports.secretToken = 'trMdfFdsFs8dfwDFmJLGJgPb7oPFKgqRr5iYfTb9leOx';

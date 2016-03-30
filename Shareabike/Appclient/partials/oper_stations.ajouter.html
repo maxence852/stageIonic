@@ -1,0 +1,43 @@
+<div class="container" ng-controller="OperStationPostCtrl">
+ 
+    <h3>Nouvelle station</h3>
+    <p>* champs obligatoires</p>
+    <form>
+        <div class="form-group">
+            <label for="inputNom">Nom *</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder="nom de la station" ng-model="post.nom_station">
+        </div>
+        <div class="form-group">
+            <label class="radio-inline">
+                <input type="radio" name="optradio" ng-model="post.fixe_virtuelle" value="false">Fixe</label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" ng-model="post.fixe_virtuelle" value="true">Virtuelle</label>
+        </div>
+       <div class="form-group">
+            <label for="inputCap">Capacité *</label>
+            <input type:'text' class="form-control" id="inputCap" placeholder="capacité de la station" ng-model="post.capacite_optimum">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteV">Limite vide *</label>
+            <input type:'text' class="form-control" id="inputLimiteV" placeholder="limite de vélos pour définir quand la station est quasiment vide" ng-model="post.limite_vide">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Bonus+</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="nombre de points ajoutés, si le vélo est déposé dans la station quasiment vide" ng-model="post.bonus_ajouter">
+        </div>
+       <div class="form-group">
+            <label for="inputLimiteP">Limite pleine *</label>
+            <input type:'text' class="form-control" id="inputLimiteP" placeholder="limite de vélos pour définir quand la station est quasiment pleine" ng-model="post.limite_pleine">
+        </div>
+       <div class="form-group">
+            <label for="inputBp">Bonus-</label>
+            <input type:'text' class="form-control" id="inputBp" placeholder="enlevés, si le vélo est déposé dans la station quasiment pleine" ng-model="post.bonus_enlever">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder="description" ng-model="post.descript_station">
+        </div>
+        <button  type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>

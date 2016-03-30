@@ -1,0 +1,17 @@
+<div class="container" ng-controller="OperDomaineEditCtrl">
+ 
+    <h3>Mon Domaine</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputtelhelp">téléphone de service</label>
+            <input type:'text' class="form-control" id="inputtelhelp" placeholder='{{post.tel_service}}' ng-model="post.tel_service">
+        </div>
+        <div class="form-group">
+            <label for="inputdescription">description</label>
+            <input type:'text' class="form-control" id="inputdescription" placeholder='{{post.descript_domaine}}' ng-model="post.descript_domaine">
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

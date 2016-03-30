@@ -1,0 +1,59 @@
+<div class="container" ng-controller="DepotCarteCtrl">
+  <div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>Adresse</th>
+        <th>Tel.</th>
+        <th>Capacité en camions</th>
+        <th>Capacité en vélos</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Action</th>
+      </tr>
+        <td>{{post.iddepot}}</td>
+        <td>{{post.dom_depot}}</td>
+        <td>{{post.adresse}}</td>
+        <td>{{post.tel}}</td>
+        <td>{{post.capacite_camion}}</td>
+        <td>{{post.capacite_velo}}</td>
+        <td>{{post.position_depot.x}}</td>
+        <td>{{post.position_depot.y}}</td>
+
+        <td>
+            <a href="#/depots/editer/{{post.iddepot}}" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+
+    </table>
+  </p>
+  </div>
+
+    <div class="mapCanvas">
+        <ui-gmap-google-map
+                center='center'
+                zoom='map.zoom'
+                draggable="map.draggable"
+                options="options">
+            <ui-gmap-marker
+                    coords="marker.coords"
+                    options="marker.options"
+                    idkey="marker.id">
+            </ui-gmap-marker>
+            <ui-gmap-polyline  
+                path="polyline.path" 
+                stroke="polyline.stroke" 
+                visible='polyline.visible'
+                geodesic='polyline.geodesic' 
+                fit="false" 
+                editable="false" 
+                draggable="polyline.draggable" 
+                icons='polyline.icons'>
+            </ui-gmap-polyline>            
+
+        </ui-gmap-google-map>
+    </div>
+
+</div>

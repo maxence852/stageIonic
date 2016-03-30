@@ -1,0 +1,11 @@
+{
+  "port": 443,
+  "base": {
+  	"uri": "https://vps258804.ovh.net:80/api/admin"
+  	},
+  "tls": {
+  	"key": "./config/server.enc.key",
+  	"crt": "./config/server.crt",
+  	"pas": "mons2015"
+  }
+}

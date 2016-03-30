@@ -1,0 +1,51 @@
+<div class="container" ng-controller="OperTypeveloGetCtrl">
+  <div class="page-header">
+    <h3>Types de velo </h3>
+  </div>
+  <a href="#/oper/typevelos/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Tarif</th>
+        <th>Réservations</th>
+        <th>Avertissements</th>
+        <th>Déposer en station</th>
+        <th>Photo</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in typevelos">
+        <td>{{p.idtypevelo}}</td>
+        <td>{{p.nom_type_fr}}</td>
+        <td>{{p.nom_tarif}}</td>
+
+        <td ng-if="p.reservation_possible==true">
+          <span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="p.reservation_possible==false">non</td>
+
+        <td ng-if="p.avertir_sidisponible==true">
+          <span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="p.avertir_sidisponible==false">non</td>
+
+        <td ng-if="p.deposer_station==true">
+          <span style="color:#088A08" class="glyphicon glyphicon-ok"></span></td>
+        <td ng-if="p.deposer_station==false">non</td>
+
+        <td>
+          <img ng-src="{{p.uri_photovelo}}" class="img-rounded" alt="?" width="80" height="50">
+        </td>
+
+        <td>
+          <a href="#/oper/typevelos/editer/{{p.idtypevelo}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idtypevelo)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+
+      </tr>
+    </table>
+  </p>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="container" ng-controller="VeloEditCtrl">
+ 
+    <h3>Fiche vélo : <code>{{post.idvelo}}</code>
+        <a href="#/locationvelos/{{post.idvelo}}" class="btn btn-link">Historique de locations <span class="glyphicon glyphicon-list" ></span></a></h3> 
+    <div style="text-align: right">
+        <img ng-src="{{post.uri_photovelo}}" class="img-thumbnail" alt="image" width="184" height="116">
+    </div>    
+    <form>
+        <div class="form-group" > 
+            <label for="inputStationList">Sélectionez une Station *</label>
+            <select class="form-control" ng-model="station_selection" ng-options="station as (station.idstation + ' ' + station.nom_station + ' ' + station.dom_station)  for station in stations">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputTypeList">Sélectionez un Type de vélo *</label>
+            <select class="form-control" ng-model="typevelo_selection" ng-options="typevelo as (typevelo.idtypevelo + ' ' + typevelo.nom_type_fr + ' ' + typevelo.dom_typevelo)  for typevelo in typevelos">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputStatutList">Sélectionez un Statut de vélo *</label>
+            <select class="form-control" ng-model="statutvelo_selection" ng-options="statutvelo as (statutvelo.idstatutvelo + ' ' + statutvelo.nom_statut_fr)  for statutvelo in statutvelos">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="inputp">Position:</label>
+            <a href="#/velos/point/{{post.dom_velo}}/{{post.idvelo}}" class="btn btn-link btn" >  modifier sur la carte
+            <span class="glyphicon glyphicon-screenshot"></span></a> 
+            <input type:'text' class="form-control" id="inputp" placeholder="{{post.position_velo}}" ng-model="post.position_velo">
+        </div>
+<!--
+        <div class="form-group">
+            <label for="inputl">Latitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputl" placeholder="{{post.position_velo.x}}" ng-model="post.position_velo.x">
+        </div>       
+        <div class="form-group">
+            <label for="inputll">Longitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputll" placeholder="{{post.position_velo.y}}" ng-model="post.position_velo.y">
+        </div> 
+-->
+        <div class="form-group">
+            <label for="inputc">Code cadenas classique/éléctronique</label>
+            <input type:'text' class="form-control" id="inputc" placeholder="{{code_cadenas}}" ng-model="post.code_cadenas">
+        </div>
+        <div class="form-group">
+            <label for="inputcpu">Puce GPS du vélo</label>
+            <input type:'text' class="form-control" id="inputcpu" placeholder="{{pucegps_velo}}" ng-model="post.pucegps_velo">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact_velo" value="true">Desactiver le vélo</label>
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

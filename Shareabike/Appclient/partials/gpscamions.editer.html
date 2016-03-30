@@ -1,0 +1,25 @@
+<div class="container" ng-controller="GpscamionEditCtrl">
+ 
+    <h3>Modification</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputNi">GPS</label>
+            <input type:'text' class="form-control" id="inputNi" placeholder='{{post.gps}}'  ng-model="post.gps">
+        </div>
+        <div class="form-group">
+            <label for="inputnom">Nouvelle Position:</label>
+            <input type:'text' class="form-control" id="inputnom" placeholder="{{post.position}}" ng-model="post.position">
+        </div>
+        <div class="form-group">
+            <label for="inputl">Latitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputl" placeholder="{{post.position.x}}" ng-model="post.position.x">
+        </div>       
+        <div class="form-group">
+            <label for="inputll">Longitude actuelle:</label>
+            <input type:'text' class="form-control" id="inputll" placeholder="{{post.position.y}}" ng-model="post.position.y">
+        </div> 
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="container" ng-controller="ClientGetCtrl">
+  <div class="page-header">
+    <h3>Utilisateurs</h3>
+  </div>
+  <a href="#/clients/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>N client</th>
+        <th>Nom</th>
+        <th>Adresse</th>
+        <th>CP</th>
+        <th>Ville</th>
+        <th>Statut</th>
+        <th>Provision</th>
+        <th>Bonus</th>
+        <th>Date modification</th>
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in clients">
+        <td>{{p.idclient}}</td>
+        <td>{{p.nom_client}}</td>
+        <td>{{p.adresse_client}}</td>
+        <td>{{p.cpville}}</td>
+        <td>{{p.nomville}}</td>
+        <td>{{p.nom_statut_fr}}</td>
+        <td>{{p.solde_montant}}</td>
+        <td>{{p.solde_bonus}}</td>
+        <td>{{p.date_modif}}</td>
+
+        <td ng-if="p.desact_client==true">désactivé</td>
+        <td ng-if="p.desact_client==false">actif</td> 
+
+        <td>
+          <a href="#/clients/editer/{{p.idclient}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idclient)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

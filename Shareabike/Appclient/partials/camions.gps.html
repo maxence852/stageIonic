@@ -1,0 +1,24 @@
+<div class="container" ng-controller="CamionGpsCtrl">
+  <div class="page-header">
+    <h3>Positions de camion</h3>
+  </div>
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>GPS</th>
+        <th>Date</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+      </tr>
+      <tr ng-repeat="p in gpscamions">
+        <td>{{p.idgpscamion}}</td>
+        <td>{{p.gps}}</td>
+        <td>{{p.date_position}}</td>
+        <td>{{p.position.x}}</td>
+        <td>{{p.position.y}}</td>
+      </tr>
+    </table>
+  </p>
+
+</div>

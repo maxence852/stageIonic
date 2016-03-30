@@ -1,0 +1,46 @@
+<div class="container" ng-controller="OperTarifGetCtrl">
+  <div class="page-header">
+    <h3>Tarifs </h3>
+  </div>
+  <a href="#/oper/tarifs/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Min.gratuit</th>
+        <th>Prix1</th>
+        <th>Durée1</th>
+        <th>Prix2</th>
+        <th>Durée2</th>
+        <th>Prix3</th>
+        <th>Durée3</th>       
+        <th>Etat</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in tarifs">
+        <td>{{p.idtarif}}</td>
+        <td>{{p.nom_tarif}}</td>
+        <td>{{p.duree_gratuit}}</td>
+        <td>{{p.prix_1}}</td>
+        <td>{{p.duree_1}}</td>
+        <td>{{p.prix_2}}</td>
+        <td>{{p.duree_2}}</td>
+        <td>{{p.prix_3}}</td>
+        <td>{{p.duree_3}}</td> 
+        <td ng-if="p.desact_tarif==true">désactivé</td>
+        <td ng-if="p.desact_tarif==false">actif</td> 
+
+        <td>
+          <a href="#/oper/tarifs/editer/{{p.idtarif}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idtarif)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+
+      </tr>
+    </table>
+  </p>
+
+</div>

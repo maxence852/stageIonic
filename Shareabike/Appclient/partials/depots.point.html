@@ -1,0 +1,27 @@
+<div class="container" ng-controller="DepotPointCtrl">
+    <div class="mapCanvas">
+        <ui-gmap-google-map
+                center='map.center'
+                zoom='map.zoom'
+                draggable="map.draggable"
+                options="options">
+            <ui-gmap-polyline  
+                path="polyline.path" 
+                stroke="polyline.stroke" 
+                visible='polyline.visible'
+                geodesic='polyline.geodesic' 
+                fit="false" 
+                editable="false" 
+                draggable="polyline.draggable" 
+                icons='polyline.icons'>
+            </ui-gmap-polyline>
+
+            <ui-gmap-drawing-manager 
+                options="drawingManagerOptions"
+                events="drawingManagerEvents">
+            </ui-gmap-drawing-manager>
+   
+        </ui-gmap-google-map>
+
+    </div>
+</div>

@@ -1,0 +1,96 @@
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="HeaderCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button> 
+        <a class="navbar-brand" style="color:#5882FA" href="#/">ShareABike</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" ng-show="showMenu">
+        <li ng-if="velo=='expl'"><a ng-href="#/domaines">Domaines</a></li>
+        <li ng-if="velo=='oper'"><a ng-href="#/oper/domaines">Domaine</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Gestion
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-if="velo=='expl'"><a ng-href="#/admins">Administrateurs</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/profil">Profil</a></li>            
+            <li ng-if="velo=='expl'"><a ng-href="#/licences">Licences</a></li> 
+            <li ng-if="velo=='expl'"><a ng-href="#/stations">Stations</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/stations">Stations</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/bonustrajets">Trajets Bonus</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/bonustrajets">Trajets Bonus</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/tarifs">Tarifs</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/tarifs">Tarifs</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/typevelos">Type de vélo</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/typevelos">Type de vélo</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/velos">Vélos</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/velos">Vélos</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/gpsvelos">GPS de vélo</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/depots">Depots</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/gpscamions">GPS de camion</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/camions">Camions</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Tableau de Bord 
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-if="velo=='expl'"><a ng-href="#/rapports">Rapports</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/rapports">Rapports</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/transactions">Transactions</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/transactions">Transactions</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/clients">Utilisateurs</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/clients">Utilisateurs</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/locationfinies">Locations</a></li>
+            <li ng-if="velo=='oper'"><a ng-href="#/oper/locationfinies">Locations</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Optimisation 
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-class="{active:isActive('/')}"><a ng-href="#/">NAXYS</a></li>
+            <li ng-class="{active:isActive('/')}"><a ng-href="#/">MARO</a></li>
+          </ul>
+        </li>
+
+        <li ng-if="velo=='expl'" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Paramètres 
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li ng-if="velo=='expl'"><a ng-href="#/niveau">Rôles</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/statutvelos">Statut de vélo</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/typecamions">Type de camion</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/statutcamions">Statut de camion</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/statutclients">Statut d'utilisateur</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/pays">Pays</a></li>
+            <li ng-if="velo=='expl'"><a ng-href="#/villes">Villes</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right" ng-show="showMenu">
+        <li><a href="javascript:" ng-click="logout()">
+          <span class="glyphicon glyphicon-log-out"></span> Déconnexion </a>
+        </li>
+      </ul>
+<!--
+      <ul class="nav navbar-nav navbar-right" >
+        <li ng-if="isActive()"><a href="#/login" ng-click="login()">
+          <span class="glyphicon glyphicon-log-in"></span> Login </a>
+        </li>
+      </ul>
+-->    
+    </div>
+  </div>
+</div>

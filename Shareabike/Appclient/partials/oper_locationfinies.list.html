@@ -1,0 +1,38 @@
+<div class="container" ng-controller="OperLocationfinieGetCtrl">
+  <div class="page-header">
+    <h3>Locations</h3>
+  </div>
+  <a href="#/oper/locationencours" class="btn btn-success" style="margin-bottom: 15px;">Afficher les location en cours</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Domaine</th>
+        <th>ID vélo</th>
+        <th>N client</th>
+        <th>Nom client</th>
+        <th>Date de debut</th>
+        <th>Date de fin</th>
+        <th>Durée (minutes)</th>
+        <th>Détail</th>
+      </tr>
+      <tr ng-repeat="p in locations">
+        <td>{{p.idlocation}}</td>
+        <td>{{p.dom_location}}</td>
+        <td>{{p.velo_location}}</td>
+        <td>{{p.client_location}}</td>
+        <td>{{p.nom_client}}</td>
+        <td>{{p.date_debut}}</td>
+        <td>{{p.date_fin}}</td>
+        <td>{{p.duree}}</td>
+
+        <td>
+            <a href="#/oper/locationfinies/detail/{{p.idlocation}}" class="btn btn-info btn-xs">
+            <span class="glyphicon glyphicon-new-window"></span></a>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

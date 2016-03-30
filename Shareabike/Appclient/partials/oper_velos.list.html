@@ -1,0 +1,47 @@
+<div class="container" ng-controller="OperVeloGetCtrl">
+  <div class="page-header">
+    <h3>Vélos</h3>
+  </div>
+  <a href="#/oper/velos/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Station</th>
+        <th>Type</th>
+        <th>Statut</th>
+        <th>Date</th>
+        <th>Position</th>
+        <th>Puce GPS</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in velos">
+        <td>{{p.idvelo}}</td>
+        <td>{{p.nom_station}}</td>
+        <td>{{p.nom_type_fr}}</td>
+        <td>{{p.nom_statut_fr}}</td>
+        <td>{{p.date_statut}}</td>
+
+        <td>
+          <a href="#/oper/velos/carte/{{p.dom_velo}}/{{p.idvelo}}" class="btn btn-link btn"> Carte
+          <span class="glyphicon glyphicon-screenshot"></span></a>         
+        </td>         
+
+        <td ng-if="p.activ_pucegps==true">
+            <a href="#/oper/velos/gps/{{p.pucegps_velo}}" class="btn btn-link btn">Historique 
+            <span class="glyphicon glyphicon-map-marker"></span></a> 
+        </td>
+        <td ng-if="p.activ_pucegps==false">non</td>
+
+        <td>
+            <a href="#/oper/velos/editer/{{p.idvelo}}" class="btn btn-warning btn-xs">
+            <span class="glyphicon glyphicon-edit"></span></a>
+            <button class="btn btn-danger btn-xs" ng-click="delete(p.idvelo)">
+            <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

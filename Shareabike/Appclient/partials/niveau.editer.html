@@ -1,0 +1,18 @@
+<div class="container" ng-controller="NiveauEditCtrl">
+ 
+    <h3>Modification</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputNiveau">niveau</label>
+            <input type:'text' class="form-control" id="inputNiveau" placeholder='{{post.niveau}}'  ng-model="post.niveau">
+        </div>
+        <div class="form-group">
+            <label for="inputNiveau_nom">Rôle</label>
+            <input type:'text' class="form-control" id="inputNiveau_nom" placeholder="{{post.nom_fr}}" ng-model="post.nom_fr">
+        </div>
+       
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="container" ng-controller="BonustrajetEditCtrl">
+ 
+    <h3>Modification du trajet bonus : <code>{{post.idbonustrajet}}</code> </h3> 
+  
+    <form>
+        <div class="form-group" >
+            <label for="inputUserDmnList">Sélectionez le domaine *</label>
+            <select class="form-control" ng-model="domaine_selection" ng-options="domaine as (domaine.iddomaine) for domaine in domaines | orderBy: 'iddomaine' ">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputStationList1">Sélectionez une Station de départ *</label>
+            <select class="form-control" ng-model="station_selection1" ng-options="station as (station.idstation + ' ' + station.nom_station + ' ' + station.dom_station)  for station in stations | filter:{dom_station:domaine_selection.iddomaine}">
+            </select>
+        </div>
+        <div class="form-group" >
+            <label for="inputStationList2">Sélectionez une Station d'arrivée *</label>
+            <select class="form-control" ng-model="station_selection2" ng-options="station as (station.idstation + ' ' + station.nom_station + ' ' + station.dom_station)  for station in stations | filter: {dom_station:domaine_selection.iddomaine}">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputD">Date de validité</label>
+            <input type:'text' class="form-control" id="inputD" placeholder='{{post.date_valable}}' ng-model="post.date_valable">
+        </div>
+        <div class="form-group">
+            <label for="inputp">Bonus</label>
+            <input type:'text' class="form-control" id="inputp" placeholder="{{post.montant_bonus}}" ng-model="post.montant_bonus">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact_bonustrajet" value="true">Désactiver</label>
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

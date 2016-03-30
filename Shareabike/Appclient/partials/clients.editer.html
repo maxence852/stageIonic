@@ -1,0 +1,86 @@
+<div class="container" ng-controller="ClientEditCtrl">
+    <a  href="#/clients" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a> 
+    <h3>Fiche d'utilisateur: <code>{{post.idclient}}</code> </h3>
+   <form class="form-horizontal" role="form">
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputInfo">Crée le</label>
+            <div class="col-sm-10">{{post.date_creation}}<a class="btn btn-link">.</a></div> 
+        </div>     
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputInfo">Modifié le</label>
+            <div class="col-sm-10">{{post.date_modif}} ;  par : {{post.nom}}<a class="btn btn-link">.</a></div> 
+        </div> 
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputInfo">Provision</label>
+            <div class="col-sm-10"> montant:{{post.solde_montant}} ;  Bonus : {{post.solde_bonus}}
+                ; Date de mis à jour: {{post.solde_date}}
+                <a ng-if="post.statut_client==1" href="#/transactions/ajouter" class="btn btn-link">Modifier la Provision <span class="glyphicon glyphicon-euro" ></span></a>
+            </div> 
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputNom">Commentaires</label>
+            <div class="col-sm-10">
+                <a href="#/commentaires/{{post.idclient}}" class="btn btn-link">Historique <span class="glyphicon glyphicon-comment" ></span></a>
+            </div> 
+        </div>    
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputLoc">Locations</label>
+            <div class="col-sm-10">
+                <a href="#/locationclients/{{post.idclient}}" class="btn btn-link">Historique <span class="glyphicon glyphicon-list" ></span></a>
+            </div> 
+        </div> 
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputLoc">Transactions</label>
+            <div class="col-sm-10">
+                <a href="#/transactionclients/{{post.idclient}}" class="btn btn-link">Historique <span class="glyphicon glyphicon-book" ></span></a>
+            </div> 
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputNom">Nom</label>
+            <div class="col-sm-10">
+                <input type:'text' class="form-control" id="inputNom" placeholder='{{post.nom_client}}' ng-model="post.nom_client">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputpNom">Prénom</label>
+            <div class="col-sm-10">
+                <input type:'text' class="form-control" id="inputpNom" placeholder='{{post.prenom_client}}' ng-model="post.prenom_client">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputAdresse">Adresse</label>
+            <div class="col-sm-10">
+                <input type:'text' class="form-control" id="inputAdr" placeholder='{{post.adresse_client}}' ng-model="post.adresse_client">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputUserVilleList">Sélectionez une Ville</label>
+            <div class="col-sm-10">
+                <select class="form-control" ng-model="ville_selection" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputGsm">GSM</label>
+            <div class="col-sm-10">
+                <input type:'text' class="form-control" id="inputGsm" placeholder='{{post.gsm_client}}' ng-model="post.gsm_client">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputUserNivList">Selectionnez le Statut :</label>
+            <div class="col-sm-10">
+                <select class="form-control" ng-model="statutclient_selection" ng-options="statutclient as (statutclient.nom_statut_fr) for statutclient in statutclients"></select>
+            </div>
+        </div>
+        <div class="form-group" >
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox" ng-model="post.desact_client" value="true">Désactiver</label>
+                </div>
+            </div>
+        </div>  
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Enrégistrer les modifications</button>
+    </form>
+
+</div>

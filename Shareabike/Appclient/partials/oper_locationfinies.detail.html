@@ -1,0 +1,57 @@
+<div class="container" ng-controller="OperLocationfinieDetailCtrl">
+    <a  href="#/oper/locationfinies" class="btn btn-primary" style="margin-bottom: 15px;">Retour</a> 
+    <h3>Détail de la location: <code>{{post.idlocation}}</code> </h3>
+
+   <form class="form-horizontal" role="form"> 
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputVelo">ID Vélo:</label>
+            <div class="col-sm-10">{{post.velo_location}}
+                <a href="#/oper/velos/editer/{{post.velo_location}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div> 
+        </div>    
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputN">Numéro de client</label>
+            <div class="col-sm-10">{{post.client_location}}
+                <a href="#/oper/clients/editer/{{post.client_location}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputP1">Position vélo au début</label>
+            <div class="col-sm-10">Latitude: {{post.position_debut.x}} Longitude: {{post.position_debut.y}}<a class="btn btn-link">.</a> 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputS1">Station au début</label>
+            <div class="col-sm-10">{{post.station_debut}}
+                <a href="#/oper/stations/editer/{{post.station_debut}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputD1">Date, l'heure de début</label>
+            <div class="col-sm-10">{{post.date_debut}}<a class="btn btn-link">.</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputP2">Position vélo à la fin</label>
+            <div class="col-sm-10">Latitude: {{post.position_fin.x}} Longitude: {{post.position_fin.y}}<a class="btn btn-link">.</a> 
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputS2">Station à la fin</label>
+            <div class="col-sm-10">{{post.station_fin}}
+                <a href="#/oper/stations/editer/{{post.station_fin}}" class="btn btn-link">détail <span class="glyphicon glyphicon-edit" ></span></a>
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="control-label col-sm-2" for="inputD2">Date, l'heure de fin</label>
+            <div class="col-sm-10">{{post.date_fin}}<a class="btn btn-link">.</a>
+            </div>
+        </div>        
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="inputDuree">Durée en minutes</label>
+            <div class="col-sm-10">{{post.duree}}<a class="btn btn-link">.</a>
+            </div>
+        </div>
+    </form>
+
+</div>

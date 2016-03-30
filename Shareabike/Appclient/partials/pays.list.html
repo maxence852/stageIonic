@@ -1,0 +1,27 @@
+<div class="container" ng-controller="PaysGetCtrl">
+  <div class="page-header">
+    <h3>Pays</h3>
+  </div>
+  <a href="#/pays/ajouter" class="btn btn-success" style="margin-bottom: 15px;">Ajouter</a>
+
+  <p class="lead">
+    <table class="table table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Action</th>
+      </tr>
+      <tr ng-repeat="p in payss">
+        <td>{{p.idpays}}</td>
+        <td>{{p.nom_fr}}</td>
+        <td>
+          <a href="#/pays/editer/{{p.idpays}}" class="btn btn-warning btn-xs">
+          <span class="glyphicon glyphicon-edit"></span></a>
+          <button class="btn btn-danger btn-xs" ng-click="delete(p.idpays)">
+          <span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+      </tr>
+    </table>
+  </p>
+
+</div>

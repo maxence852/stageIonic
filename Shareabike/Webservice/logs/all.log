@@ -1,0 +1,399 @@
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-02T18:26:01.046Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-02T19:33:42.201Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-05T05:29:01.125Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T10:10:20.025Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T10:10:56.509Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T11:17:43.661Z"}
+{"level":"error","message":"POST 500 undefined is not a function","timestamp":"2015-04-06T11:20:12.439Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T11:21:54.106Z"}
+{"level":"error","message":"POST 500 undefined is not a function","timestamp":"2015-04-06T11:22:01.243Z"}
+{"level":"error","message":"POST 500 undefined is not a function","timestamp":"2015-04-06T11:22:15.579Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T11:24:21.015Z"}
+{"level":"error","message":"POST 500 undefined is not a function","timestamp":"2015-04-06T11:24:31.979Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T13:38:51.474Z"}
+{"level":"error","message":"POST 500 undefined is not a function","timestamp":"2015-04-06T13:39:06.499Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T17:38:08.156Z"}
+{"level":"error","message":"POST 500 Cannot read property 'create' of undefined","timestamp":"2015-04-06T17:38:19.569Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T17:40:52.425Z"}
+{"level":"error","message":"POST 500 Cannot read property 'create' of undefined","timestamp":"2015-04-06T17:41:02.147Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T21:47:42.759Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T21:49:03.931Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T22:21:05.952Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T22:35:33.567Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T23:05:02.664Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-06T23:37:56.738Z"}
+{"level":"info","message":"list de personnes","timestamp":"2015-04-06T23:38:07.132Z"}
+{"level":"error","message":"PUT 500 Cast to ObjectId failed for value \"5523072685c89cf4281ad0a2\"\" at path \"_id\"","timestamp":"2015-04-06T23:39:53.827Z"}
+{"level":"info","message":"personne modifié","timestamp":"2015-04-06T23:40:49.215Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:23:48.854Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:24:47.498Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:29:36.506Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:31:37.224Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:31:39.418Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:40:00.442Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:40:04.601Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:42:38.355Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:42:44.122Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:44:13.156Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:44:17.472Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:49:07.911Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:49:12.235Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T06:51:47.920Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T06:52:07.099Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T07:55:53.941Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T07:56:00.808Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T08:03:26.748Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T08:11:40.230Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T08:11:47.292Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T08:22:36.214Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T08:22:41.962Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T08:24:25.727Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T11:24:52.315Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T11:25:04.071Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T11:25:08.421Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T11:26:41.901Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T11:26:50.439Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-07T11:27:05.569Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-07T11:27:23.636Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T11:28:40.742Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-07T11:28:58.113Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T12:33:08.260Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-07T12:33:18.659Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T12:47:51.458Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-07T12:48:16.144Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T19:10:38.149Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-07T19:11:01.441Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T19:11:05.928Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-07T19:12:00.804Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T19:12:16.222Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-07T19:12:55.494Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-07T19:13:09.425Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T19:13:16.400Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T19:18:35.815Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T19:18:40.122Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-07T19:21:12.481Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-07T19:23:01.546Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T19:24:35.713Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T19:59:43.993Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T20:01:30.437Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:01:34.463Z"}
+{"level":"info","message":"creation: id: 4, Marue, 7000","timestamp":"2015-04-07T20:01:40.035Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T20:02:33.535Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:02:38.097Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: ecole_test.adresses.$_id_ dup key: { : \"4, Marue, 7000\" }","timestamp":"2015-04-07T20:02:44.997Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:03:00.666Z"}
+{"level":"info","message":"creation: id: 10, Rue Perdue, 7500","timestamp":"2015-04-07T20:06:25.229Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T20:08:48.805Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:08:54.957Z"}
+{"level":"info","message":"creation: id: 5, Boulevard de Victoire, 1000","timestamp":"2015-04-07T20:10:06.590Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:10:22.727Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:19:21.866Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:19:39.938Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:21:01.842Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:21:06.865Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:21:25.084Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:22:11.204Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-07T20:24:29.056Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-07T20:25:17.795Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-07T20:27:55.562Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:28:02.544Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:28:09.860Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:28:41.700Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T20:48:20.482Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:48:29.922Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T20:49:16.804Z"}
+{"level":"error","message":"POST 400 Unexpected token ,","timestamp":"2015-04-07T20:49:55.909Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-07T20:50:14.593Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T21:18:18.632Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:18:20.629Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-07T21:18:29.254Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T21:19:35.894Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:19:39.898Z"}
+{"level":"info","message":"creation: id: 552449f18032f4fc148beb1a","timestamp":"2015-04-07T21:19:45.296Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:19:50.168Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:23:16.112Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:26:36.081Z"}
+{"level":"info","message":"creation: id: 55244c668032f4fc148beb1b","timestamp":"2015-04-07T21:30:14.619Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:30:25.745Z"}
+{"level":"info","message":"creation: id: 55244c7b8032f4fc148beb1c","timestamp":"2015-04-07T21:30:35.587Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-07T21:32:50.079Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-07T21:33:03.934Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:33:14.310Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:33:54.461Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:41:10.596Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:41:35.964Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:41:58.129Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T21:51:54.470Z"}
+{"level":"error","message":"GET 500 Cast to ObjectId failed for value \"1\" at path \"_id\"","timestamp":"2015-04-07T21:52:04.240Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T21:53:33.683Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T22:20:12.638Z"}
+{"level":"error","message":"GET 500 utils.populate: invalid path. Expected string. Got typeof `undefined`","timestamp":"2015-04-07T22:20:16.679Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-07T22:22:17.129Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-07T22:22:20.095Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T12:42:16.970Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T12:46:11.375Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T12:46:20.080Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T12:46:23.737Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T12:50:00.086Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T12:50:12.770Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T12:50:25.979Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-08T12:52:12.802Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-08T12:52:29.060Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-08T12:53:54.916Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-08T12:54:09.534Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T12:54:12.854Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T13:00:24.980Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T13:00:30.035Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T20:49:06.095Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T20:49:19.878Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T20:58:55.884Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T20:59:01.768Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T21:25:36.600Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T21:25:42.020Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-08T21:25:59.883Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-08T21:27:09.728Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-08T21:27:21.040Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T22:23:43.864Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T22:23:53.018Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T22:24:14.838Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-08T22:24:35.075Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T06:31:05.446Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:31:17.849Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:33:11.440Z"}
+{"level":"error","message":"POST 500 Cast to date failed for value \"31/04/20015\" at path \"dateDiner\"","timestamp":"2015-04-09T06:34:13.863Z"}
+{"level":"error","message":"POST 500 Cast to date failed for value \"31.04.20015\" at path \"dateDiner\"","timestamp":"2015-04-09T06:34:38.926Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T06:43:46.649Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:44:00.937Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T06:45:55.519Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:46:14.194Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T06:46:30.117Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:46:43.026Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T06:46:55.984Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T06:47:05.565Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T06:47:12.598Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T06:48:19.142Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T06:48:29.253Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T06:48:37.697Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:48:42.885Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:49:55.699Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:50:25.863Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:51:37.422Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:51:53.036Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:52:24.083Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:53:28.818Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:53:50.866Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T06:54:23.843Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T06:54:47.211Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:55:15.026Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:56:12.166Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:56:46.785Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:57:58.553Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:59:11.677Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:59:32.049Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T06:59:41.014Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T06:59:48.097Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:00:05.246Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:00:11.229Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:00:24.062Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:05:59.963Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:06:13.602Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T07:18:39.824Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:19:09.605Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T07:20:07.115Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T07:21:59.745Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:22:08.922Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:22:15.015Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:24:21.712Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T07:25:01.994Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:25:06.751Z"}
+{"level":"error","message":"POST 500 Typediner is not defined","timestamp":"2015-04-09T07:29:45.768Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T07:30:40.105Z"}
+{"level":"error","message":"POST 500 Typediner is not defined","timestamp":"2015-04-09T07:30:49.454Z"}
+{"level":"error","message":"POST 500 Typediner is not defined","timestamp":"2015-04-09T07:31:11.119Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T07:31:46.825Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T07:31:49.368Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T08:33:48.594Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T08:34:13.389Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:34:49.164Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: ecole_test.typediners.$nomDiner_1 dup key: { : null }","timestamp":"2015-04-09T08:37:04.601Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T08:40:40.174Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: ecole_test.typediners.$nomDiner_1 dup key: { : null }","timestamp":"2015-04-09T08:40:49.762Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:40:59.765Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:41:43.296Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:42:18.012Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T08:42:44.219Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T08:43:44.248Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:43:56.374Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T08:44:56.090Z"}
+{"level":"error","message":"GET 500 Cast to ObjectId failed for value \"Père\" at path \"_id\"","timestamp":"2015-04-09T08:45:02.549Z"}
+{"level":"error","message":"GET 500 Cast to ObjectId failed for value \"Père\" at path \"_id\"","timestamp":"2015-04-09T08:45:14.087Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:47:41.654Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:47:51.270Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:49:06.945Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T08:49:41.477Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T08:50:01.251Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:50:04.310Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:50:17.947Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T08:50:32.734Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T08:50:36.476Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T08:50:50.807Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T09:03:34.642Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T09:04:15.039Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:04:54.775Z"}
+{"level":"error","message":"POST 500 document must have an _id before saving","timestamp":"2015-04-09T09:05:09.674Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T09:07:27.690Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T09:07:37.867Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:07:45.345Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:10:10.714Z"}
+{"level":"info","message":"creation: id: 5526423d990b52441054ed85","timestamp":"2015-04-09T09:11:25.231Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:11:59.885Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T09:13:07.702Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T09:13:33.632Z"}
+{"level":"info","message":"creation: id: 552642ef990b52441054ed86","timestamp":"2015-04-09T09:14:23.507Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:15:03.705Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:15:49.303Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T09:16:48.489Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:18:35.880Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T09:51:41.058Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:51:59.858Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:52:35.315Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T09:54:15.917Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:54:38.395Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T09:55:28.167Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:55:46.525Z"}
+{"level":"info","message":"creation: id: 55264ce6c0557a540e32bed2","timestamp":"2015-04-09T09:56:54.065Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:57:38.372Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T09:58:09.018Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:58:19.961Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T09:59:31.732Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T09:59:40.017Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T09:59:47.901Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T09:59:58.225Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:00:10.173Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:01:11.223Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:02:09.826Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: ecole_test.typeliens.$_id_ dup key: { : \"Mère\" }","timestamp":"2015-04-09T10:02:21.186Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:02:30.289Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:03:09.198Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:03:26.280Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:03:32.732Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:04:01.846Z"}
+{"level":"error","message":"PUT 500 Cast to ObjectId failed for value \"5\" at path \"adresse\"","timestamp":"2015-04-09T10:08:46.579Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T10:09:20.915Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T10:10:00.588Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:11:30.195Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T10:16:17.506Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T10:16:52.896Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T10:22:40.059Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:22:40.106Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:22:43.922Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:22:47.398Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:23:21.008Z"}
+{"level":"error","message":"POST 500 E11000 duplicate key error index: ecole_test.typediners.$nomDiner_1 dup key: { : null }","timestamp":"2015-04-09T10:23:33.932Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T10:31:18.725Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:31:18.852Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:31:28.976Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:31:36.324Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:31:46.215Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:32:01.959Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:32:07.338Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:32:26.172Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T10:33:00.113Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:34:04.284Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T10:34:37.405Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T10:34:47.242Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:34:57.488Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T10:59:53.864Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T11:05:52.678Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:06:36.110Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T11:07:54.423Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:08:11.881Z"}
+{"level":"error","message":"POST 400 Unexpected number","timestamp":"2015-04-09T11:08:47.203Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:09:37.288Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T11:10:03.526Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:10:29.874Z"}
+{"level":"error","message":"POST 500 Validation failed","timestamp":"2015-04-09T11:26:42.177Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T11:27:51.649Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:28:08.740Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T11:29:26.226Z"}
+{"level":"error","message":"POST 500 Cast to date failed for value \"25/04/2015\" at path \"dateDiner\"","timestamp":"2015-04-09T11:29:39.570Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:30:26.781Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T11:31:16.926Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T11:31:31.662Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T11:32:45.070Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T11:34:06.996Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T15:31:19.560Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T15:31:35.614Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T15:31:54.259Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T15:32:20.961Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T15:32:37.279Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T15:32:45.898Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T16:52:46.469Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T16:52:58.964Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T16:53:18.687Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T16:56:02.314Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T16:56:06.765Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T16:56:50.724Z"}
+{"level":"error","message":"PUT 500 Cast to ObjectId failed for value \"\"5526af52e413ec700fc35ab3\"\" at path \"_id\"","timestamp":"2015-04-09T16:57:26.503Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T16:57:48.451Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T16:58:01.550Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T16:58:12.093Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T19:06:15.227Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T19:20:42.655Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:20:47.877Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-09T19:21:14.455Z"}
+{"level":"error","message":"POST 500 Cast to ObjectId failed for value \"\" at path \"implantation\"","timestamp":"2015-04-09T19:22:10.113Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:22:58.874Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T19:23:34.774Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T19:25:40.593Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:25:48.458Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:26:14.917Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T19:26:31.650Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T19:27:37.322Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:28:15.201Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T19:29:50.546Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-09T19:29:56.531Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:30:06.563Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:30:45.655Z"}
+{"level":"error","message":"POST 400 Unexpected token }","timestamp":"2015-04-09T19:31:01.324Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-09T19:31:10.973Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-09T19:33:45.401Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-09T19:33:56.771Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:36:18.259Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T19:48:08.554Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:48:15.601Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-09T19:50:05.615Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-09T19:50:11.089Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T10:12:47.778Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:13:40.577Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-10T10:14:19.357Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:15:59.766Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:16:14.517Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T10:19:23.021Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:19:26.895Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-10T10:20:55.493Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:21:01.582Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-10T10:21:26.975Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:21:33.506Z"}
+{"level":"error","message":"PUT 400 Unexpected token \n","timestamp":"2015-04-10T10:22:10.398Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-10T10:23:01.876Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:23:04.135Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-10T10:24:01.843Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:24:06.219Z"}
+{"level":"info","message":"supression: ok","timestamp":"2015-04-10T10:24:23.367Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T10:24:25.706Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T11:08:40.158Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:08:40.293Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:12:04.792Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T11:33:19.605Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T11:33:53.624Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:33:57.301Z"}
+{"level":"info","message":"creation: ok","timestamp":"2015-04-10T11:34:15.183Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:34:24.005Z"}
+{"level":"info","message":"affichage: ok","timestamp":"2015-04-10T11:35:56.055Z"}
+{"level":"info","message":"modification: ok","timestamp":"2015-04-10T11:38:28.749Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:38:37.249Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T11:38:57.386Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T14:52:35.725Z"}
+{"level":"info","message":"liste: ok","timestamp":"2015-04-10T15:03:48.704Z"}
+{"level":"info","message":"Serveur ecoute le port:3000","timestamp":"2015-04-10T15:06:27.522Z"}

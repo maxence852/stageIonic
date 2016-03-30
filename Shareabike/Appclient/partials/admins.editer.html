@@ -1,0 +1,63 @@
+<div class="container" ng-controller="AdminEditCtrl">
+ 
+    <h3>Modification</h3>
+
+   <form>  
+        <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type:'text' class="form-control" id="inputNom" placeholder='{{post.nom}}' ng-model="post.nom">
+        </div>
+        <div class="form-group">
+            <label for="inputAdresse">Adresse</label>
+            <input type:'text' class="form-control" id="inputAdr" placeholder='{{post.adresse}}' ng-model="post.adresse">
+        </div>
+        <div class="form-group" >
+            <label for="inputUserVilleList">Sélectionez une Ville</label>
+            <select class="form-control" ng-model="ville_selection" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputTel">Tel.</label>
+            <input type:'text' class="form-control" id="inputTel" placeholder='{{post.tel}}' ng-model="post.tel">
+        </div>
+        <div class="form-group">
+            <label for="inputGsm">GSM</label>
+            <input type:'text' class="form-control" id="inputGsm" placeholder='{{post.gsm}}' ng-model="post.gsm">
+        </div>
+        <div class="form-group">
+            <label for="inputLogin">Login</label>
+            <input type:'text' class="form-control" id="inputLogin" placeholder='{{post.login}}' ng-model="post.login">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Nouveau mot de passe</label>
+            <input type='password' class="form-control" id="inputPassword" placeholder='mot de passe (min. 8 caractères )' ng-model="post.password">
+        </div>        
+        <div class="form-group">
+            <label for="inputPassword_repet">Répétez le mot de passe</label>
+            <input type='password' class="form-control" id="inputPassword_repet" placeholder='mot de passe (min. 8 caractères )' ng-model="post.password_repet">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success" ng-click="save_password(post)">Enregistrer le mot de passe</button>
+        </div>        
+        <div class="form-group" >
+            <label for="inputUserNivList">Selectionnez le Rôle :</label>
+            <select class="form-control" ng-model="niveau_selection" ng-options="niveau as (niveau.nom_fr) for niveau in niveaus">
+            </select>
+        </div>
+<!--
+        <div class="form-group">
+  
+            <label for="inputDes">Désactiver</label>
+            <label class="radio-inline"><input type="radio" name="optradio1" ng-model="post.desact" value="true">oui</label>
+            <label class="radio-inline"><input type="radio" name="optradio2" ng-model="post.desact" value="false">non</label>
+
+        </div>
+--> 
+        <div class="checkbox">
+            <label><input type="checkbox" ng-model="post.desact" value="true">Désactiver</label>
+        </div>  
+
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Valider</button>
+    </form>
+
+</div>

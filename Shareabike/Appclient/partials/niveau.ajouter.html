@@ -1,0 +1,18 @@
+<div class="container" ng-controller="NiveauPostCtrl">
+ 
+    <h3>Nouveau Rôle</h3>
+ 
+    <form>
+        <div class="form-group">
+            <label for="inputNiveau">niveau</label>
+            <input type:'text' class="form-control" id="inputNiveau" placeholder="niveau d'administrateur (chifre)" ng-model="post.niveau">
+        </div>
+        <div class="form-group">
+            <label for="inputNiveau_nom">Rôle</label>
+            <input type:'text' class="form-control" id="inputNiveau_nom" placeholder="nom de rôle" ng-model="post.nom_fr">
+        </div>
+        
+        <button type="submit" class="btn btn-success" ng-click="save(post)">Ajouter</button>
+    </form>
+
+</div>
