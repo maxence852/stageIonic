@@ -12,7 +12,7 @@ var config = require('../config');
 var databaseURL = config.get('db');
 
 
-var auth = {
+var auth_user = {
 
   login: function(req, res) { // Authentification de l'utilisateur: si ok: retourner un token
 
@@ -28,9 +28,10 @@ var auth = {
     pg.connect(databaseURL, function(err, client, done) {
         //var access = "false";
         // SQL Query > Select Data
-        var sql = "SELECT * FROM admins " + 
-        "INNER JOIN typeadmins ON  admins.type_admin = typeadmins.idtype "+
-        "WHERE login=($1) AND password = crypt(($2), password) AND desact=FALSE"
+        var sql = "SELECT * FROM clients " +
+        "INNER JOIN typeusers ON  clients.type_user = typeusers.idtype "+
+        "WHERE login_client=($1) AND password_client = crypt(($2), password_client) AND desact_client=FALSE"
+        // "WHERE login_client=($1) AND password_client = crypt(($2), password_client) AND desact=FALSE"
         client.query(sql, [login, password], function (err, authent){
           if (err) return res.sendStatus(401);
           done();
@@ -38,9 +39,7 @@ var auth = {
 
             log.info('Authentification: ' + login);
             // Attribuer le Rôle --> Retourner un Token
-            if(authent.rows[0].niveau == -1) return res.json(genToken(authent.rows, 'expl')); 
-            
-            if(authent.rows[0].niveau == 1) return res.json(genToken(authent.rows, 'oper'));
+            if(authent.rows[0].niveau == 1) return res.json(genToken(authent.rows, 'utilisateur'));
 
             // 1 ou -1 ? ou autre ? if(authent.rows[0].niveau == 2 ) return res.json(genToken(authent.rows, 'users'));
 
@@ -65,7 +64,7 @@ function genToken(user, role) {
   var expires = expiresIn(1); // 1 heure
   var date_licence= Date.parse(user[0].date_valid);
   var token = jwt.encode({
-    iss: user[0].idadmin,
+    iss: user[0].idclient,
     exp: expires,
     dmn: user[0].domaine,
     valid: date_licence,
@@ -82,4 +81,4 @@ function expiresIn(numHours) {
   return dateObj.setTime(dateObj.getTime() + numHours * 3600 * 1000);
 }
 
-module.exports = auth;
+module.exports = auth_user;

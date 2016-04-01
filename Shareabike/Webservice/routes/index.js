@@ -13,7 +13,7 @@ var express = require('express');
 var router = express.Router();
 var auth = require('./login_pg');
 /*Auth User Ionic*/
-var auth = require('./login_user');
+var auth_user = require('./login_user');
 
 
 /* Routes d'acces libre */
@@ -21,12 +21,9 @@ router.use('/', require('./list'));
 router.post('/login', auth.login);
 router.use('/admin', require('../lib/validateToken'));
 
-/* Routes d'acces libre utilisateur ionic */
-//router.use('/login_users', require('./login_users'));
-
-
 /*User Client Ionic*/
-router.post('/login2', auth.login);
+router.post('/login2', auth_user.login);
+router.use('/user', require('../lib/validateToken'));
 
 /* Routes d'acces avec Authentification + Autorisation: exploitant */
 router.use('/api/expl/pays', require('./pays')); 
