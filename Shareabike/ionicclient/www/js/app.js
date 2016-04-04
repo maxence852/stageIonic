@@ -134,7 +134,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       views: {
         'menuContent': {
           templateUrl: 'templates/register2.html',
-          controller: 'register2Ctrl',
+          controller: 'RegisterCtrl',
           data: {
             requiredLogin: false
           }

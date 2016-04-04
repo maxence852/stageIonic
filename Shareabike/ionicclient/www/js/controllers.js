@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -62,19 +62,35 @@ angular.module('starter.controllers', [])
     {title: 'velo6', id: 6}
   ];
 })
-
-.controller('LoginCtrl', function($scope){
-
-})
-.controller('register1Ctrl', function($scope){
-
-})
-  .controller('register2Ctrl', function($scope){
+  myApp.controller('register1Ctrl', function($scope) {
 
   })
-    /*.controller('LoginCtrl',function($scope){
 
-        alert('log');
-        $state.go('app.menu3');
-      })*/
+myApp.controller("RegisterCtrl", ['$scope' , '$location', 'dataFactory',
+  function($scope, $state, $location, dataFactory) {
 
+    dataFactory.findVille().then(function(data) {
+      $scope.villes = data.data;
+      $scope.ville_selection = $scope.villes[0];
+    });
+
+    dataFactory.findStatutclient().then(function(data) {
+      $scope.statutclients = data.data;
+      $scope.statutclient_selection = $scope.statutclients[0];
+    });
+
+
+    $scope.save = function(post) {
+      $scope.post.cp_client = $scope.ville_selection.idville;
+      $scope.post.statut_client = $scope.statutclient_selection.idstatutclient;
+
+      dataFactory.createClient(post).success(function(data) {
+        $state.go('app.login_users');
+        //$location.path("/clients");
+      }).error(function(status, data) {
+        alert("Format de données saisies est incorrect");
+      });
+    };
+
+  }
+]);

@@ -5,10 +5,10 @@ Mis à jours : 10/12/2015
 */
 
 var express = require('express');
+var log = require('../lib/log')(module);
 var router = express.Router();
 var pg = require('pg');
 var config = require('../config');
-var log = require('../lib/log')(module);
 var databaseURL = config.get('db');
 
 
