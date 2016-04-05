@@ -123,7 +123,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
           templateUrl: 'templates/register1.html',
           controller: 'register1Ctrl',
           data: {
-            requiredLogin: true
+            requiredLogin: false
           }
         }
       }

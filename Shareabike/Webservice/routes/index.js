@@ -25,7 +25,7 @@ router.use('/admin', require('../lib/validateToken'));
 /*User Client Ionic*/
 router.post('/login2', auth_user.login);
 router.use('/user', require('../lib/validateToken'));
-router.use('/api/villes', require('./villes'));
+router.use('/register', require('./user_register'));
 
 /* Routes d'acces avec Authentification + Autorisation: exploitant */
 router.use('/api/expl/pays', require('./pays')); 

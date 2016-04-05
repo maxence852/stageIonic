@@ -78,5 +78,6 @@ myApp.factory('TokenInterceptor', function($q, $window) {
     }
 
   };
-  alert("#JeSuisAuthFactoryFin");
+
+
 });

@@ -1,4 +1,4 @@
-<ion-view view-title="register 2"ng-controller="RegisterCtrl">
+<ion-view view-title="register 2" ng-controller="RegisterCtrl" xmlns="http://www.w3.org/1999/html">
   <ion-pane>
     <ion-content>
       <form>
@@ -9,11 +9,11 @@
         </label>
         <label class="item item-input">
           <span class="input-label">Nom</span>
-          <input type="text" ng-model="nom" minlength="2" maxlength="30">
+          <input type="text" class="form-control" id="inputNom" ng-model="post.nom_client2" minlength="2" maxlength="30">
         </label>
           <label class="item item-input">
             <span class="input-label">Sélectionez une Ville</span>
-          <select class="form-control" ng-model="ville_selection" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
+          <select class="form-control" ng-model="ville_selection">
           </select>
             </label>
         <label class="item item-input">
@@ -32,9 +32,9 @@
           <span class="input-label">Numéro de teléphone</span>
           <input type="tel" ng-model="numtel" minlength="10">
         </label>
-
         <div class="padding">
-          <input type="button"ng-click="save(post)"ng-disabled="!prenom || !nom || !cp || !ville ||!rue ||!numero || !numtel" class="button button-block button-balanced" value="s'enregisrer"onclick="self.location.href='#/app/login'"/>
+          <button type="submit"ng-click="save(post)" class="button button-block button-balanced">s'enregisrer</button>
+         <!-- <input type="button"ng-click="save(post)"ng-disabled="!prenom || !nom || !cp || !ville ||!rue ||!numero || !numtel" class="button button-block button-balanced" value="s'enregisrer"onclick="self.location.href='#/app/login'"/>-->
         </div>
       </div>
         </form>
