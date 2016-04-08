@@ -15,7 +15,7 @@
         'password_client': post.password_client,
         'pseudo_client' : post.pseudo_client,
         'gsm_client': post.gsm_client,
-        'cp_client': post.cp_client,
+        //'cp_client': post.cp_client,
         'adresse_client' : post.adresse_client
       });
     },

@@ -68,19 +68,19 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
 myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2',
   function($scope, $state, $location, dataFactory2) {
-
     dataFactory2.findVille().then(function(data) {
-      $scope.villes = data.data;
-      $scope.ville_selection = $scope.villes[0];
+     /* $scope.villes = data.data;
+      $scope.ville_selection = $scope.villes[0];*/
+
     });
 
    /* dataFactory.findStatutclient().then(function(data) {
       $scope.statutclients = data.data;
       $scope.statutclient_selection = $scope.statutclients[0];
     });*/
-
+    //lert($scope.ville_selection.idville);
     $scope.save = function(post) {
-      $scope.post.cp_client = $scope.ville_selection.idville;
+      //$scope.post.cp_client = $scope.ville_selection.idville;
 
       dataFactory2.createUsers(post).success(function(data) {
         $state.go('app.login_users');
@@ -92,3 +92,13 @@ myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2
 
   }
 ]);
+
+myApp.controller("PostsCtrl", function($scope, $http) {
+  $http.get('data/posts.json').
+  success(function(data, status, headers, config) {
+    $scope.posts = data;
+  }).
+  error(function(data, status, headers, config) {
+    // log error
+  });
+});

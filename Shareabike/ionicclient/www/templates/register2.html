@@ -1,8 +1,9 @@
-<ion-view view-title="register 2" ng-controller="RegisterCtrl" xmlns="http://www.w3.org/1999/html">
+<ion-view view-title="register" ng-controller="RegisterCtrl" xmlns="http://www.w3.org/1999/html">
   <ion-pane>
     <ion-content>
       <form>
       <div class="form-group">
+        <div id="part1">
           <label class="item item-input">
             <span class="input-label">Login</span>
             <input type="email" class="form-control" id="inputLog" ng-model="post.login_client" placeholder="exemple@gmail.com">
@@ -11,39 +12,56 @@
             <span class="input-label">mot de passe</span>
             <input type="password" ng-model="post.password_client" ng-minlength="3" placeholder="minimum 3 caractères">
           </label>
-        <label class="item item-input">
-          <span class="input-label">retaper le mot de passe</span>
-          <input type="password" ng-model="password2" ng-minlength="3" placeholder="minimum 3 caractères">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Nom d'utilisateur</span>
-          <input type="text" ng-model=" post.pseudo_client" ng-minlength="3" placeholder="minimum 3 caractères">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Prénom</span>
-          <input type="text" class="form-control" id="inputPrenom" ng-model="post.prenom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Nom</span>
-          <input type="text" class="form-control" id="inputNom" ng-model="post.nom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
-        </label>
           <label class="item item-input">
-            <span class="input-label">Sélectionez une Ville</span>
-          <select class="form-control" ng-model="post.cp_client" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
-          </select>
-            </label>
-        <label class="item item-input">
-          <span class="input-label">Adresse</span>
-          <input type="text" ng-model="post.adresse_client" minlength="3">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Numéro de GSM</span>
-          <input type="number" ng-model="post.gsm_client" min="10">
-        </label>
-        <div class="padding">
-          <button type="submit" ng-click="save(post)" class="button button-block button-balanced">s'enregisrer</button>
-         <!-- <input type="button"ng-click="save(post)"ng-disabled="!prenom || !nom || !cp || !ville ||!rue ||!numero || !numtel" class="button button-block button-balanced" value="s'enregisrer"onclick="self.location.href='#/app/login'"/>-->
+            <span class="input-label">retaper le mot de passe</span>
+            <input type="password" ng-model="password2" ng-minlength="3" placeholder="minimum 3 caractères">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Nom d'utilisateur</span>
+            <input type="text" ng-model=" post.pseudo_client" ng-minlength="3" placeholder="minimum 3 caractères">
+          </label>
+          <button onclick="document.getElementById('part1').style.display='none';document.getElementById('part2').style.display='block';" class="button button-block button-balanced">suivant</button>
         </div>
+        <div id="part2" style="display: none">
+          <label class="item item-input">
+            <span class="input-label">Prénom</span>
+            <input type="text" class="form-control" id="inputPrenom" ng-model="post.prenom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Nom</span>
+            <input type="text" class="form-control" id="inputNom" ng-model="post.nom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
+          </label>
+           <!-- <label class="item item-input">
+              <span class="input-label">Sélectionez une Ville</span>
+            <select class="form-control" ng-model="post.cp_client" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
+            </select>
+              </label>-->
+          <label class="item item-input">
+            <span class="input-label">Code Postal</span>
+            <input type="text" class="form-control" id="inputCp">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Localité</span>
+            <input type="text" class="form-control" id="inputLocalite">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">aaaaa</span>
+            <input type="text" class="form-control" id="inputCpVille" ng-model="post.cp_client" >
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Adresse</span>
+            <input type="text" ng-model="post.adresse_client" minlength="3">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Numéro de GSM</span>
+            <input type="number" ng-model="post.gsm_client" min="10">
+          </label>
+          <div class="padding">
+            <button type="submit" ng-click="save(post)" class="button button-block button-balanced">s'enregisrer</button>
+            <!-- <input type="button"ng-click="save(post)"ng-disabled="!prenom || !nom || !cp || !ville ||!rue ||!numero || !numtel" class="button button-block button-balanced" value="s'enregisrer"onclick="self.location.href='#/app/login'"/>-->
+          </div>
+          <button onclick="document.getElementById('part2').style.display='none';document.getElementById('part1').style.display='block';" class="button button-block button-balanced">précedent</button>
+      </div>
       </div>
         </form>
     </ion-content>

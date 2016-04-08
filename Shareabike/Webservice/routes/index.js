@@ -27,6 +27,7 @@ router.post('/login2', auth_user.login);
 router.use('/user', require('../lib/validateToken'));
 router.use('/register', require('./user_register'));
 router.use('/ville', require('./user_villes'));
+router.use('/idVille', require('./user_idVille'));
 
 /* Routes d'acces avec Authentification + Autorisation: exploitant */
 router.use('/api/expl/pays', require('./pays')); 

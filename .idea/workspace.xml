@@ -8274,6 +8274,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/typecamions.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/typevelos.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/user_idVille.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Webservice/routes/velos.js" />
@@ -8409,11 +8410,11 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="clients.ajouter.html" pinned="false" current-in-tab="true">
+            <file leaf-file-name="clients.ajouter.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/partials/clients.ajouter.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.31619257">
-                    <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+                  <state vertical-scroll-proportion="-7.3076925">
+                    <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
                     <folding />
                   </state>
                 </provider>
@@ -8422,7 +8423,7 @@
             <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/js/controllers.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-18.068966">
+                  <state vertical-scroll-proportion="0.0">
                     <caret line="3211" column="25" selection-start-line="3211" selection-start-column="25" selection-end-line="3211" selection-end-column="25" />
                     <folding />
                   </state>
@@ -8432,7 +8433,7 @@
             <file leaf-file-name="factory.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/js/factory.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-15.137931">
+                  <state vertical-scroll-proportion="0.0">
                     <caret line="739" column="51" selection-start-line="739" selection-start-column="51" selection-end-line="739" selection-end-column="51" />
                     <folding />
                   </state>
@@ -8442,18 +8443,18 @@
             <file leaf-file-name="clients.js" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/clients.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="-10.448276">
+                  <state vertical-scroll-proportion="0.0">
                     <caret line="64" column="9" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/index.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0">
-                    <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+                  <state vertical-scroll-proportion="0.55921054">
+                    <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                     <folding />
                   </state>
                 </provider>
@@ -8470,16 +8471,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.9615383">
-              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="register1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register1.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -8493,8 +8484,20 @@
       <file leaf-file-name="register2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46879536">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.59216255">
+              <caret line="48" column="97" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#ion-content#0;n#ion-pane#0;n#ion-view#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_users.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/login_users.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="21" column="138" selection-start-line="21" selection-start-column="137" selection-end-line="21" selection-end-column="138" />
               <folding />
             </state>
           </provider>
@@ -8504,7 +8507,7 @@
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
+              <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -8514,7 +8517,7 @@
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+              <caret line="98" column="16" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -8523,11 +8526,21 @@
       <file leaf-file-name="user_villes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="32.58621">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="32" />
+            <state vertical-scroll-proportion="-27.793104">
+              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
               <folding>
                 <element signature="e#45#88#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_idVille.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_idVille.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -8536,7 +8549,7 @@
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/factory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -8546,10 +8559,20 @@
         <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
+              <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
               <folding>
                 <element signature="e#45#88#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/login_user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -8604,20 +8627,21 @@
         <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user.js" />
         <option value="$PROJECT_DIR$/Shareabike/Appclient/js/controllers.js" />
         <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/villes.js" />
-        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/login_users.html" />
         <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_ville.js" />
         <option value="$PROJECT_DIR$/Shareabike/Appclient/partials/clients.ajouter.html" />
         <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/auth/auth.factory.js" />
         <option value="$PROJECT_DIR$/Shareabike/Appclient/js/factory.js" />
-        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/app.js" />
-        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js" />
-        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/index.js" />
-        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js" />
         <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/clients.js" />
+        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register1.html" />
+        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/factory.js" />
+        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js" />
+        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/app.js" />
+        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/login_users.html" />
         <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register2.html" />
         <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/controllers.js" />
-        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/js/factory.js" />
-        <option value="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register1.html" />
+        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js" />
+        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/index.js" />
+        <option value="$PROJECT_DIR$/Shareabike/Webservice/routes/user_idVille.js" />
       </list>
     </option>
   </component>
@@ -8676,8 +8700,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -8948,6 +8970,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -8960,8 +8984,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\homei\Shareabike\ionicclient\www\lib\ionic\js" />
       <recent name="C:\homei\Shareabike\Webservice\routes" />
+      <recent name="C:\homei\Shareabike\ionicclient\www\lib\ionic\js" />
       <recent name="C:\homei\Shareabike\ionicclient" />
       <recent name="C:\home i\Shareabike\ionicclient2\www\js" />
     </key>
@@ -9067,7 +9091,7 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14892268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -9108,13 +9132,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/node_modules/bower/lib/commands/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/liste_velos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -9297,13 +9314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/login_users.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19738752">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/admins.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -9329,7 +9339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384">
           <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -9337,7 +9346,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -9345,7 +9353,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -9353,7 +9360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -9365,94 +9371,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/login_user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/libs/angular/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33286715">
           <caret line="22" column="389" selection-start-line="22" selection-start-column="389" selection-end-line="22" selection-end-column="389" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/js/factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="739" column="51" selection-start-line="739" selection-start-column="51" selection-end-line="739" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/clients.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.448276">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="9" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/partials/clients.ajouter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.58621">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="32" />
-          <folding>
-            <element signature="e#45#88#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+        <state vertical-scroll-proportion="-7.3076925">
+          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.068966">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3211" column="25" selection-start-line="3211" selection-start-column="25" selection-end-line="3211" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="40" selection-start-line="88" selection-start-column="40" selection-end-line="88" selection-end-column="40" />
-          <folding>
-            <element signature="e#45#88#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.9615383">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        <state vertical-scroll-proportion="-12.153846">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -9465,27 +9426,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/js/factory.js">
+    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.137931">
-          <caret line="739" column="51" selection-start-line="739" selection-start-column="51" selection-end-line="739" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="37" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shareabike/Appclient/partials/clients.ajouter.html">
+    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31619257">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/login_users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="21" column="138" selection-start-line="21" selection-start-column="137" selection-end-line="21" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/login_user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="45" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="45" />
+          <folding>
+            <element signature="e#45#88#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/js/factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55921054">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_villes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.793104">
+          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
+          <folding>
+            <element signature="e#45#88#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shareabike/Webservice/routes/user_idVille.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46879536">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding />
+        <state vertical-scroll-proportion="0.59216255">
+          <caret line="48" column="97" selection-start-line="48" selection-start-column="97" selection-end-line="48" selection-end-column="97" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#ion-content#0;n#ion-pane#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

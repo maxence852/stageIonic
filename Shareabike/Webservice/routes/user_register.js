@@ -74,7 +74,7 @@ router.post('/', function(req, res, next) {
                     "(nom_client, prenom_client, login_client, password_client, pseudo_client," +
                         "gsm_client, cp_client, adresse_client, type_user, modif_par, statut_client)"+
                     "values($1,$2,$3,crypt(($4), gen_salt('bf',6)),$5,"+
-                        "$6, $7, $8, 1, 3, 1)";
+                        "$6, $7, 5, 1, 3, 1)";
                 var data_post = [
                     req.body.nom_client,
                     req.body.prenom_client,
@@ -82,7 +82,7 @@ router.post('/', function(req, res, next) {
                     req.body.password_client,
                     req.body.pseudo_client,
                     req.body.gsm_client,
-                    req.body.cp_client,
+                    //req.body.cp_client,
                     req.body.adresse_client
                     /*req.body.statut_client,
                     req.body.desact_client,
