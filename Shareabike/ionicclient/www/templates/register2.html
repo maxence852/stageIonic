@@ -3,37 +3,45 @@
     <ion-content>
       <form>
       <div class="form-group">
+          <label class="item item-input">
+            <span class="input-label">Login</span>
+            <input type="email" class="form-control" id="inputLog" ng-model="post.login_client" placeholder="exemple@gmail.com">
+          </label>
+          <label class="item item-input">
+            <span class="input-label">mot de passe</span>
+            <input type="password" ng-model="post.password_client" ng-minlength="3" placeholder="minimum 3 caractères">
+          </label>
+        <label class="item item-input">
+          <span class="input-label">retaper le mot de passe</span>
+          <input type="password" ng-model="password2" ng-minlength="3" placeholder="minimum 3 caractères">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Nom d'utilisateur</span>
+          <input type="text" ng-model=" post.pseudo_client" ng-minlength="3" placeholder="minimum 3 caractères">
+        </label>
         <label class="item item-input">
           <span class="input-label">Prénom</span>
-          <input type="text" ng-model="prenom" minlength="2" maxlength="30">
+          <input type="text" class="form-control" id="inputPrenom" ng-model="post.prenom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
         </label>
         <label class="item item-input">
           <span class="input-label">Nom</span>
-          <input type="text" class="form-control" id="inputNom" ng-model="post.nom_client2" minlength="2" maxlength="30">
+          <input type="text" class="form-control" id="inputNom" ng-model="post.nom_client" minlength="2" maxlength="30" placeholder="minimum 2 caractères">
         </label>
           <label class="item item-input">
             <span class="input-label">Sélectionez une Ville</span>
-          <select class="form-control" ng-model="ville_selection">
+          <select class="form-control" ng-model="post.cp_client" ng-options="ville as (ville.cpville + ' ' + ville.nomville) for ville in villes | orderBy: 'cpville' ">
           </select>
             </label>
         <label class="item item-input">
-          <span class="input-label">Ville</span>
-          <input type="text" ng-model="ville" minlength="3">
+          <span class="input-label">Adresse</span>
+          <input type="text" ng-model="post.adresse_client" minlength="3">
         </label>
         <label class="item item-input">
-          <span class="input-label">Rue</span>
-          <input type="text" ng-model="rue" minlength="3">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Numéro</span>
-          <input type="number" ng-model="numero" minlength="1" min="1">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Numéro de teléphone</span>
-          <input type="tel" ng-model="numtel" minlength="10">
+          <span class="input-label">Numéro de GSM</span>
+          <input type="number" ng-model="post.gsm_client" min="10">
         </label>
         <div class="padding">
-          <button type="submit"ng-click="save(post)" class="button button-block button-balanced">s'enregisrer</button>
+          <button type="submit" ng-click="save(post)" class="button button-block button-balanced">s'enregisrer</button>
          <!-- <input type="button"ng-click="save(post)"ng-disabled="!prenom || !nom || !cp || !ville ||!rue ||!numero || !numtel" class="button button-block button-balanced" value="s'enregisrer"onclick="self.location.href='#/app/login'"/>-->
         </div>
       </div>

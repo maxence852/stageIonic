@@ -1,29 +1,33 @@
-<ion-view view-title="register">
+<ion-view view-title="register"  ng-controller="register1Ctrl">
   <ion-pane>
     <ion-content>
-      <div class="list">
+      <form>
+      <div class="form-group">
         <label class="item item-input">
           <span class="input-label">Email</span>
-          <input type="email" ng-model="email">
+          <input type="email" class="form-control" id="inputLog" ng-model="login_client">
         </label>
         <label class="item item-input">
           <span class="input-label">mot de passe</span>
-          <input type="password" ng-model="password"ng-minlength="3">
+          <input type="password" ng-model="password_client" ng-minlength="3">
         </label>
 
         <label class="item item-input">
           <span class="input-label">retaper le mot de passe</span>
-          <input type="password" ng-model="password2"ng-minlength="3">
+          <input type="password" ng-model="password2" ng-minlength="3">
         </label>
         <label class="item item-input">
           <span class="input-label">Nom d'utilisateur</span>
-          <input type="text" ng-model="pseudo"ng-minlength="3">
+          <input type="text" ng-model="pseudo" ng-minlength="3">
         </label>
         <div class="padding">
-         <!--<a href="#/app/register2" > <input type="button" ng-disabled="(!email || !password) || (password != password2) || !pseudo " class="button button-block button-balanced"value="continuer"></a>-->
-          <input type="button" ng-disabled="(!email || !password) || (password != password2) || !pseudo " class="button button-block button-balanced"value="continuer" onclick="self.location.href='#/app/register2'"/>
+         <a href="#/app/register2"><input type="button"  class="button button-block button-balanced" value="continuer"></a>
+          <!--<input type="button" ng-disabled="(!post.login_client || !post.password_client) || (post.password_client != password2) || !pseudo " class="button button-block button-balanced"value="continuer" onclick="self.location.href='#/app/register2'"/>-->
+          <!--<input type="button"class="button button-block button-balanced"value="continuer" onclick="self.location.href='#/app/register2'"/>-->
+          <!--<button type="submit"onclick="self.location.href='#/app/register2'" class="button button-block button-balanced">suivant</button>-->
         </div>
       </div>
+        </form>
     </ion-content>
   </ion-pane>
 </ion-view>

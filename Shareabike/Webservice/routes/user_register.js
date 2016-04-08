@@ -63,24 +63,30 @@ router.post('/', function(req, res, next) {
 
             pg.connect(databaseURL, function(err, client, done) {
 
-                var sql = "INSERT INTO clients " +
-                    "(nom_client, prenom_client, cp_client, adresse_client, "+
+                /*var sql = "INSERT INTO clients " +
+                    "(idclient,nom_client, prenom_client, cp_client, adresse_client, "+
                     "gsm_client, login_client, password_client, statut_client, "+
                     "modif_par, desact_client, type_user) "+
-                    "values('lolilol', 'bedon', 5, 'hehehehehehe', '0477895623', "+
-                    "'maxouuser', '12345678', 1, 1, false, 1)";
+                    "values(50,$2, 'bedon', 5, 'hehehehehehe',"+
+                    "'0477895623','maxouuser', '12345678', 1,"+
+                    " 1, false, 1)";*/
+                var sql = "INSERT INTO clients " +
+                    "(nom_client, prenom_client, login_client, password_client, pseudo_client," +
+                        "gsm_client, cp_client, adresse_client, type_user, modif_par, statut_client)"+
+                    "values($1,$2,$3,crypt(($4), gen_salt('bf',6)),$5,"+
+                        "$6, $7, $8, 1, 3, 1)";
                 var data_post = [
-                    req.body.nom_client2,
-                    req.body.prenom_client2,
-                    req.body.cp_client2,
-                    req.body.adresse_client2,
-                    req.body.gsm_client2,
-                    req.body.login_client2,
-                    req.body.password_client2,
-                    req.body.statut_client2,
-                    req.body.modif_par2,
-                    req.body.desact_client2,
-                    req.body.type_user2
+                    req.body.nom_client,
+                    req.body.prenom_client,
+                    req.body.login_client,
+                    req.body.password_client,
+                    req.body.pseudo_client,
+                    req.body.gsm_client,
+                    req.body.cp_client,
+                    req.body.adresse_client
+                    /*req.body.statut_client,
+                    req.body.desact_client,
+                    req.body.type_user*/
                     ];
 
                 client.query(sql, data_post, function (err, clients_post){
@@ -102,9 +108,42 @@ router.post('/', function(req, res, next) {
                 });
 
             });
-
 });
 
+//test post qui fonctionne avec une autre table #maxence
+
+/* router.post('/', function(req, res, next) {
+
+ pg.connect(databaseURL, function(err, client, done) {
+ var sql = "INSERT INTO userclient " +
+ "(nom_user_client, prenom_user_client)"+
+ "values($1,'testeu')";
+ var data_post = [
+ req.body.nom_user_client
+ ];
+
+ client.query(sql, data_post, function (err, clients_post){
+
+ if (err) {
+ res.status(400);
+ log.info(err);
+ return res.json({"status": 400, "message": err});
+ }
+ client.query("SELECT * FROM clients ORDER BY idclient ASC", function (err, clients_post){
+
+ if (err) {
+ res.status(401);
+ return res.json({"status": 401, "message": err});
+ }
+ done();
+ return res.json(clients_post.rows);
+ });
+ });
+
+ });
+
+ });
+*/
 
 /* GET /clients/id
 router.get('/:id', function(req, res, next) {
@@ -307,6 +346,8 @@ router.delete('/:id', function(req, res, next) {
     });
 });
 */
+
+
 
 // Returne router
 module.exports = router;

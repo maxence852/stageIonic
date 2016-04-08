@@ -61,28 +61,26 @@ myApp.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
     {title: 'velo5', id: 5},
     {title: 'velo6', id: 6}
   ];
-})
+});
   myApp.controller('register1Ctrl', function($scope) {
 
-  })
+  });
 
 myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2',
   function($scope, $state, $location, dataFactory2) {
 
-    /*dataFactory.findVille().then(function(data) {
+    dataFactory2.findVille().then(function(data) {
       $scope.villes = data.data;
       $scope.ville_selection = $scope.villes[0];
     });
 
-    dataFactory.findStatutclient().then(function(data) {
+   /* dataFactory.findStatutclient().then(function(data) {
       $scope.statutclients = data.data;
       $scope.statutclient_selection = $scope.statutclients[0];
     });*/
 
-
     $scope.save = function(post) {
-      //$scope.post.cp_client = $scope.ville_selection.idville;
-      //$scope.post.statut_client = $scope.statutclient_selection.idstatutclient;
+      $scope.post.cp_client = $scope.ville_selection.idville;
 
       dataFactory2.createUsers(post).success(function(data) {
         $state.go('app.login_users');

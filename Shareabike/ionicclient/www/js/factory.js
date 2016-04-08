@@ -1,28 +1,34 @@
 /**
  * Created by maxence on 24/03/2016.
  */
-myApp.factory('dataFactory2', function($http) {
 
-  //var urlBase = "https://vps258804.ovh.net:80";
+//***********Inscription register*********
+  myApp.factory('dataFactory2', function($http) {
+
+  var urlBase = "https://vps258804.ovh.net:80";
   return {
     createUsers: function(post) {
-      return $http.post('https://vps258804.ovh.net:80/register',{
-        'nom_client2': post.nom_client2,
-        'prenom_client2': post.prenom_client2,
-        'adresse_client2': post.adresse_client2,
-        'cp_client2': post.cp_client2,
-        'gsm_client2': post.gsm_client2,
-        'login_client2': post.login_client2,
-        'password_client2': post.password_client2,
-        'statut_client2': post.statut_client2,
-        'modif_par2':post.modif_par2,
-        'desact_client2':post.desact_client2,
-        'type_user2':post.type_user2
+      return $http.post(urlBase+'/register',{
+        'nom_client': post.nom_client,
+        'prenom_client': post.prenom_client,
+        'login_client': post.login_client,
+        'password_client': post.password_client,
+        'pseudo_client' : post.pseudo_client,
+        'gsm_client': post.gsm_client,
+        'cp_client': post.cp_client,
+        'adresse_client' : post.adresse_client
       });
-    }
+    },
 
+    findVille:function()
+    {
+      return $http.get(urlBase + '/ville');
+    }
 };
 });
+
+
+//*****Login***********
 myApp.factory('dataFactory', function($http) {
 
   var urlBase = "https://vps258804.ovh.net:80/api";
@@ -31,7 +37,7 @@ myApp.factory('dataFactory', function($http) {
     /*users*/
     readusers: function(id) {
       return $http.get(urlBase + '/login_users/' + id);
-    },
+    }
 
     /*createUsers: function(post) {
       return $http.post(urlBase + '/register',{
