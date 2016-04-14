@@ -7,22 +7,32 @@
 
   var urlBase = "https://vps258804.ovh.net:80";
   return {
+    sendEmail: function()
+    {
+      return $http.get(urlBase + '/send');
+    },
     createUsers: function(post) {
       return $http.post(urlBase+'/register',{
-        'nom_client': post.nom_client,
-        'prenom_client': post.prenom_client,
         'login_client': post.login_client,
         'password_client': post.password_client,
         'pseudo_client' : post.pseudo_client,
-        'gsm_client': post.gsm_client,
-        //'cp_client': post.cp_client,
-        'adresse_client' : post.adresse_client
+        'prenom_client': post.prenom_client,
+        'nom_client': post.nom_client,
+        'pays_client' : post.pays_client,
+        'codePostal_client': post.codePostal_client,
+        'ville_client' : post.ville_client,
+        'adresse_client' : post.adresse_client,
+        'numMaison_client' : post.numMaison_client,
+        'gsm_client': post.gsm_client
       });
     },
 
     findVille:function()
     {
       return $http.get(urlBase + '/ville');
+    },
+    findPays: function() {
+      return $http.get(urlBase + '/pays');
     }
 };
 });

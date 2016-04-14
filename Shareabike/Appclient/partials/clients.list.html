@@ -9,9 +9,14 @@
       <tr>
         <th>N client</th>
         <th>Nom</th>
-        <th>Adresse</th>
+        <th>Prenom</th>
+        <th>Pseudo</th>
+        <th>Pays</th>
         <th>CP</th>
         <th>Ville</th>
+        <th>Rue</th>
+        <th>Numéro</th>
+        <th>GSM</th>
         <th>Statut</th>
         <th>Provision</th>
         <th>Bonus</th>
@@ -22,9 +27,17 @@
       <tr ng-repeat="p in clients">
         <td>{{p.idclient}}</td>
         <td>{{p.nom_client}}</td>
-        <td>{{p.adresse_client}}</td>
-        <td>{{p.cpville}}</td>
-        <td>{{p.nomville}}</td>
+        <td>{{p.prenom_client}}</td>
+        <td>{{p.pseudo_client}}</td>
+        <td>{{p.pays_client}}</td>
+        <td>{{p.codePostal_client}}</td>
+        <td>{{p.ville_client}}</td>
+        <td>{{p.adresse_client}}</td> <!--rue-->
+        <!-- modif by Maxence<td>
+        {{p.cpville}}</td>
+        <td>{{p.nomville}}</td>-->
+        <td>{{p.numMaison_client}}</td>
+        <td>{{p.gsm_client}}</td>
         <td>{{p.nom_statut_fr}}</td>
         <td>{{p.solde_montant}}</td>
         <td>{{p.solde_bonus}}</td>

@@ -3232,7 +3232,8 @@ myApp.controller("ClientEditCtrl", ['$scope', '$routeParams' , '$location', 'dat
       $location.path("/clients");
     });
 
-    dataFactory.findVille().then(function(doc1) {
+
+   dataFactory.findVille().then(function(doc1) {
       $scope.villes = doc1.data;
       for(var i = 0; i < $scope.villes.length; i++){
         if ($scope.villes[i].idville ==  $scope.post.cp_client) {

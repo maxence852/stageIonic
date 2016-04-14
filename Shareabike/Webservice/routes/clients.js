@@ -19,14 +19,23 @@ router.get('/', function(req, res, next) {
     //connexion à PostgreSQL
     pg.connect(databaseURL, function(err, client, done) {
         // SQL Query
-        var sql =  "SELECT idclient, nom_client, prenom_client, cp_client, adresse_client, "+
+        /*var sql =  "SELECT idclient, nom_client, prenom_client, cp_client, adresse_client, "+
         "gsm_client, pin_code, login_client, password_client, statut_client, solde_montant, "+
         "solde_bonus, solde_date, modif_par, date_modif, date_creation, desact_client, "+ 
         "nom_statut_fr, cpville, nomville, nom FROM clients "+
         "INNER JOIN villes ON  clients.cp_client = villes.idville "+
         "INNER JOIN statutclients ON  clients.statut_client = statutclients.idstatutclient "+
         "INNER JOIN admins ON  clients.modif_par = admins.idadmin "+
-        "ORDER BY idclient ASC";
+        "ORDER BY idclient ASC";*/
+
+        //modif by Maxence
+        var sql =  "SELECT idclient, nom_client, prenom_client, pseudo_client, pays_client, codePostal_client, ville_client, adresse_client, "+
+            "numMaison_client, gsm_client, pin_code, login_client, password_client, statut_client, solde_montant, "+
+            "solde_bonus, solde_date, modif_par, date_modif, date_creation, desact_client, "+
+            "nom_statut_fr, nom FROM clients "+
+            "INNER JOIN statutclients ON  clients.statut_client = statutclients.idstatutclient "+
+            "INNER JOIN admins ON  clients.modif_par = admins.idadmin "+
+            "ORDER BY idclient ASC";
         client.query(sql, function (err, clients_get){
         // Erreurs
             if (err) return next(err);

@@ -1,6 +1,3 @@
-/**
- * Created by maxence on 04/04/2016.
- */
 /*
  Kaysarov
  Mis à jours : 10/12/2015
@@ -64,31 +61,7 @@ router.post('/', function(req, res, next) {
 
     });
 });
-/* get id ville */
-router.get('/:cpville/:nomville', function(req, res, next) {
-    pg.connect(databaseURL, function(err, client, done) {
 
-        var sql = "SELECT id FROM villes " +
-            "WHERE cpville = $1 AND nomville = $2";
-        var data_post = [
-            req.params.cpville,
-            req.params.nomville];
-
-
-            client.query(sql,data_post, function (err, id_post){
-
-                if (err) {
-                    res.status(401);
-                    log.info(err);
-                    return res.json({"status": 401, "message": err});
-                }
-                done();
-                return res.json(id_post.rows);
-            });
-        });
-
-
-});
 
 /* GET /villes/id */
 router.get('/:id', function(req, res, next) {

@@ -17,6 +17,7 @@ var jwt = require('jwt-simple');
 var secret = require('../config/secret');
 
 
+
 /* GET /clients listing.
 router.get('/', function(req, res, next) {
     //connexion à PostgreSQL
@@ -71,19 +72,25 @@ router.post('/', function(req, res, next) {
                     "'0477895623','maxouuser', '12345678', 1,"+
                     " 1, false, 1)";*/
                 var sql = "INSERT INTO clients " +
-                    "(nom_client, prenom_client, login_client, password_client, pseudo_client," +
-                        "gsm_client, cp_client, adresse_client, type_user, modif_par, statut_client)"+
-                    "values($1,$2,$3,crypt(($4), gen_salt('bf',6)),$5,"+
-                        "$6, $7, 5, 1, 3, 1)";
+                    "(login_client, password_client, pseudo_client, prenom_client, nom_client," +
+                        "pays_client, codePostal_client, ville_client, adresse_client, numMaison_client, gsm_client,"+
+                        "type_user, modif_par, statut_client)"+
+                    "values($1, crypt(($2), gen_salt('bf',6)), $3, $4, $5,"+
+                            "$6, $7, $8, $9, $10, $11,"+
+                            " 1, 3, 2)";
                 var data_post = [
-                    req.body.nom_client,
-                    req.body.prenom_client,
                     req.body.login_client,
                     req.body.password_client,
                     req.body.pseudo_client,
-                    req.body.gsm_client,
+                    req.body.prenom_client,
+                    req.body.nom_client,
+                    req.body.pays_client,
+                    req.body.codePostal_client,
+                    req.body.ville_client,
+                    req.body.adresse_client,
+                    req.body.numMaison_client,
+                    req.body.gsm_client
                     //req.body.cp_client,
-                    req.body.adresse_client
                     /*req.body.statut_client,
                     req.body.desact_client,
                     req.body.type_user*/

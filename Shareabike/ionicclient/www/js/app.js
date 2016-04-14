@@ -19,6 +19,7 @@ myApp.run(function($ionicPlatform) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    //window.alert("Cette application nécessite l'activation des données mobile ou du wifi pour fonctionner");
   });
 });
 myApp.run(function ($rootScope) {
@@ -55,7 +56,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/menu1',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu1.html',
+        templateUrl: 'templates/menu1.html'
     }
   },
   data:
@@ -68,8 +69,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/menu2',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu2.html',
-
+        templateUrl: 'templates/menu2.html'
       }
     },
     data: {
@@ -144,7 +144,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     */
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login_users');
-})
+});
 
 
 

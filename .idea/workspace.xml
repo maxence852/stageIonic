@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54cccd4c-7448-4311-adbe-8c101507ed01" name="Default" comment="register ok, test email validation">
+    <list default="true" id="54cccd4c-7448-4311-adbe-8c101507ed01" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/image/TheCity.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/image/bicycle-city-street3.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/image/bicycleside.png" />
@@ -136,7 +136,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/lib/ionic/fonts/ionicons.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/lib/ionic/fonts/ionicons.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/lib/ionic/fonts/ionicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/Desktop" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/appClient.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/Appclient/config/config.json" />
@@ -9028,7 +9027,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/menu3.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register1.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Shareabike/ionicclient/www/templates/register2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/home.iml" afterPath="$PROJECT_DIR$/.idea/home.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shareabike/Appclient/js/controllers.js" afterPath="$PROJECT_DIR$/Shareabike/Appclient/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shareabike/Appclient/partials/admins.ajouter.html" afterPath="$PROJECT_DIR$/Shareabike/Appclient/partials/admins.ajouter.html" />
@@ -9140,7 +9138,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29376855">
+            <state vertical-scroll-proportion="0.45468053">
               <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
@@ -9951,11 +9949,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="860" extended-state="0" />
+    <frame x="0" y="0" width="1600" height="860" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2240717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -10390,7 +10389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Shareabike/ionicclient/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29376855">
+        <state vertical-scroll-proportion="0.45468053">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
