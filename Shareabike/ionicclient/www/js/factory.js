@@ -9,6 +9,7 @@
   return {
     sendEmail: function()
     {
+      alert('clic1');
       return $http.get(urlBase + '/send');
     },
     createUsers: function(post) {

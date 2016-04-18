@@ -16,6 +16,9 @@ var databaseURL = config.get('db');
 var jwt = require('jwt-simple');
 var secret = require('../config/secret');
 
+//email validation
+var nodemailer = require("nodemailer");
+var chromelogger = require('chromelogger');
 
 
 /* GET /clients listing.
@@ -117,6 +120,67 @@ router.post('/', function(req, res, next) {
             });
 });
 
+
+//Validation E mail
+var smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "hotmail",
+    auth: {
+        user: "maxence.begon@hotmail.com",
+        pass: "senbonzakura01"
+    }
+});
+
+var rand,mailOptions,host,link;
+router.use(chromelogger.middleware);
+
+router.get('/send',function(req,res){
+
+    rand=Math.floor((Math.random() * 100) + 54);
+    host=req.get('host');
+    link="https://"+req.get('host')+"/register/verify?id="+rand;
+    //link ="https://vps258804.ovh.net/send/verify?id="+rand;
+    mailOptions={
+        to : req.query.to,
+        subject : "Please confirm your Email ionic account",
+        html : "Hello,<br> Please Click on the link to verify your email.<br><a href="+link+">Click here to verify</a>"
+    };
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(error, response){
+        if(error){
+            console.log(error);
+            res.chrome.log(error);
+            res.end("error"+error);
+        }else{
+            console.log("Message sent: " + response.message);
+            res.end("sent");
+        }
+    });
+});
+router.get('/verify',function(req,res){
+
+    console.log(req.protocol+":/"+req.get('host'));
+    if((req.protocol+"://"+req.get('host'))==("https://"+host))
+    //if((("https://vps258804.ovh.net/send/verify?id="+rand))==("https://"+host))
+    {
+        console.log("Domain is matched. Information is from Authentic email");
+        if(req.query.id==rand)
+        {
+            console.log("email is verified");
+            res.end("<h1>Votre compte ShareABike "+mailOptions.to+" a bien été activé");
+        }
+        else
+        {
+            console.log("email is not verified");
+            res.end("<h1>Bad Request</h1>");
+        }
+    }
+    else
+    {
+        res.end("<h1>Request is from unknown source</h1>");
+    }
+
+});
+
 //test post qui fonctionne avec une autre table #maxence
 
 /* router.post('/', function(req, res, next) {
@@ -127,233 +191,7 @@ router.post('/', function(req, res, next) {
  "values($1,'testeu')";
  var data_post = [
  req.body.nom_user_client
- ];
-
- client.query(sql, data_post, function (err, clients_post){
-
- if (err) {
- res.status(400);
- log.info(err);
- return res.json({"status": 400, "message": err});
- }
- client.query("SELECT * FROM clients ORDER BY idclient ASC", function (err, clients_post){
-
- if (err) {
- res.status(401);
- return res.json({"status": 401, "message": err});
- }
- done();
- return res.json(clients_post.rows);
- });
- });
-
- });
-
- });
-*/
-
-/* GET /clients/id
-router.get('/:id', function(req, res, next) {
-    var id = req.params.id;
-    if (id != undefined) {
-        pg.connect(databaseURL, function(err, client, done) {
-
-            var sql =  "SELECT idclient, nom_client, prenom_client, cp_client, adresse_client, "+
-                "gsm_client, pin_code, login_client, password_client, statut_client, solde_montant, "+
-                "solde_bonus, solde_date, modif_par, date_modif, date_creation, desact_client, "+
-                "nom_statut_fr, cpville, nomville, nom FROM clients "+
-                "INNER JOIN villes ON  clients.cp_client = villes.idville "+
-                "INNER JOIN statutclients ON  clients.statut_client = statutclients.idstatutclient "+
-                "INNER JOIN admins ON  clients.modif_par = admins.idadmin "+
-                "WHERE idclient=($1)";
-            client.query(sql, [id], function (err, clientsid_get){
-                if (err) {
-                    res.status(401);
-                    return res.json({"status": 401, "message": err});
-                }
-                done();
-                return res.json(clientsid_get.rows);
-            });
-        });
-    } else {
-        res.status(400);
-        return res.json({"status": 400, "message": "id undefined"});
-    }
-});
-*/
-
-/* PUT /clients/:id
-router.put('/:id', function(req, res, next) {
-    var id = req.params.id;
-    var date = new Date();
-    var modifpar = jwt.decode(req.headers['x-access-token'], secret.secretToken, 'HS512').iss;
-    if (modifpar != undefined || id != undefined) {
-        pg.connect(databaseURL, function(err, client, done) {
-
-            var sql = "UPDATE clients SET "+
-                "nom_client=($1), prenom_client=($2), cp_client=($3), adresse_client=($4), gsm_client=($5), "+
-                "statut_client=($6), desact_client=($7), date_modif=($8), modif_par=($9) "+
-                "WHERE idclient=($10)";
-            var data_post = [
-                req.body.nom_client,
-                req.body.prenom_client,
-                req.body.cp_client,
-                req.body.adresse_client,
-                req.body.gsm_client,
-                req.body.statut_client,
-                req.body.desact_client,
-                date, modifpar, id];
-
-            client.query(sql, data_post, function (err, clients_put){
-
-                if (err) {
-                    res.status(400);
-                    log.info(err);
-                    return res.json({"status": 400, "message": err});
-                }
-                client.query("SELECT * FROM clients  WHERE idclient=($1)", [id], function (err, clients_put){
-
-                    if (err) {
-                        res.status(401);
-                        return res.json({"status": 401, "message": err});
-                    }
-                    done();
-                    return res.json(clients_put.rows);
-                });
-            });
-        });
-
-    } else {
-        res.status(401);
-        return res.json({"status": 401, "message": "id undefined"});
-    }
-});
-*/
-
-
-
-/* PUT /clients/solde/:idclient */
-/*
- router.put('/:id', function(req, res, next) {
- var id = req.params.id;
- if (id != undefined) {
- pg.connect(databaseURL, function(err, client, done) {
-
- var sql = "UPDATE clients SET "+
- "solde_montant=($1), solde_bonus=($2), solde_date=($3) "+
- "WHERE idclient=($4)";
- var data_post = [
- req.body.solde_montant,
- req.body.solde_bonus,
- req.body.solde_date,
- id];
-
- client.query(sql, data_post, function (err, clients_put){
-
- if (err) {
- res.status(400);
- log.info(err);
- return res.json({"status": 400, "message": err});
- }
- var sql2 = "SELECT solde_montant, solde_bonus, solde_date FROM clients  WHERE idclient=($1)";
- client.query(sql2, [id], function (err, clients_put){
-
- if (err) {
- res.status(401);
- return res.json({"status": 401, "message": err});
- }
- done();
- return res.json(clients_put.rows);
- });
- });
- });
-
- } else {
- res.status(401);
- return res.json({"status": 401, "message": "id undefined"});
- }
- });
-
- */
-
-
-
-/* PUT /clients/password/:id */
-/*
- router.put('/password/:id', function(req, res, next) {
- var id = req.params.id;
- if (id != undefined) {
- if(req.body.password == req.body.password_repet && req.body.password.length >= 8){
- pg.connect(databaseURL, function(err, client, done) {
-
- var sql = "UPDATE clients SET "+
- "password = crypt(($1), gen_salt('bf',8)) WHERE idclient=($2)";
- var data_post = [
- req.body.password,
- id ];
-
- client.query(sql, data_post, function (err, admin_put){
-
- if (err) {
- res.status(400);
- log.info(err);
- return res.json({"status": 400, "message": err});
- };
- client.query("SELECT * FROM clients  WHERE idclient=($1)", [id], function (err, admin_put){
-
- if (err) {
- res.status(401);
- log.info(err);
- return res.json({"status": 401, "message": err});
- }
- done();
- return res.json(admin_put.rows);
- });
- });
- });
- } else {
- res.status(401);
- log.info(err);
- return res.json({"status": 401, "message": "password error"});
- };
-
- } else {
- res.status(401);
- log.info(err);
- return res.json({"status": 401, "message": "id undefined"});
- };
- });
- */
-
-/* DELETE /clients/:id
-router.delete('/:id', function(req, res, next) {
-    var id = req.params.id;
-
-    pg.connect(databaseURL, function(err, client, done) {
-
-        client.query("DELETE FROM clients WHERE idclient=($1)", [id], function (err, cb){
-
-            if (err) {
-                res.status(400);
-                log.info(err);
-                return res.json({"status": 400, "message": err});
-            }
-            client.query("SELECT * FROM clients ORDER BY idclient ASC", function (err, cb){
-
-                if (err) {
-                    res.status(401);
-                    log.info(err);
-                    return res.json({"status": 401, "message": err});
-                }
-                done();
-                return res.json(cb.rows);
-            });
-        });
-
-    });
-});
-*/
-
+ ];*/
 
 
 // Returne router

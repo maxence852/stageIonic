@@ -29,7 +29,7 @@ router.use('/register', require('./user_register'));
 router.use('/ville', require('./user_villes'));
 router.use('/pays', require('./user_pays'));
 router.use('/idVille', require('./user_idVille'));
-router.use('/send', require('./user_send'));
+//router.use('/send', require('./user_send'));
 
 /* Routes d'acces avec Authentification + Autorisation: exploitant */
 router.use('/api/expl/pays', require('./pays')); 

@@ -1,1 +1,34 @@
 /* Empty. Add your own CSS if you like */
+
+#container
+{
+  margin-left:400px;
+  margin-top:50px;
+}
+#to,#subject,#content
+{
+  font-family: "Segoe UI",serif;
+  font-size:18px;
+  width:530px;
+}
+h1
+{
+  font-family: "Segoe UI",serif;
+  font-size:40px;
+  color: #3b5998;
+}
+p
+{
+  color:green;
+}
+#send_email
+{
+  font-size:15px;
+  font-family: "Segoe UI",serif;
+  margin: 80px;
+}
+#message
+{
+  font-size:18px;
+
+}

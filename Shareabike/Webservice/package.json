@@ -22,6 +22,7 @@
     "replaceall": "^0.1.6",
     "serve-favicon": "^2.3.0",
     "winston": ">0.9.0",
-    "nodemailer": "0.7.1"
+    "nodemailer": "0.7.1",
+    "chromelogger": "1.1"
   }
 }

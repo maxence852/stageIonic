@@ -71,6 +71,7 @@ myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2
 
     $scope.save = function(post) {
 
+
      // $scope.post.cp_client = $scope.ville_selection.idville;
 
       dataFactory2.createUsers(post).success(function(data) {
@@ -79,8 +80,25 @@ myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2
       }).error(function(status, data) {
         alert("Le format de données saisies est incorrect ou vous avez oublié d'activer les données mobile");
       });
-      dataFactory2.sendEmail();
+
+      var from,to,subject,text;
+      //todo check email double
+
+      to=$("#inputLog").val();
+      alert(to);
+      $.get("https://vps258804.ovh.net:80/register/send",{to:to},function(data){
+        //dataFactory2.sendEmail({to:to}).then(function(data){
+        alert(data);
+        if(data=="sent")
+        {
+          $("#message").empty().html("<p>Email is been sent at "+to+" . Please check inbox !</p>");
+          alert('clic3');
+        }
+
+      });
+
     };
+
 
   }
 

@@ -2,67 +2,12 @@
   <ion-pane>
     <ion-content>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-      <div id="container">
+      <div id="contairrrner">
       <h1>Email-verification System in Node.js</h1>
-      <input type="text" id="to" placeholder="Enter E-mail which you want to verify"><br>
+      <input type="text" id="to" placeholder="Entrer Email à vérifier"><br>
       <button id="send_email">Send Email</button><br>
       <span id="message"></span>
       </div>
-
-        <script>
-          $(document).ready(function(){
-            var from,to,subject,text;
-            $("#send_email").click(function(){
-              alert('clic');
-              to=$("#to").val();
-              $("#message").text("Sending E-mail...Please wait");
-              $.get("http://localhost:63343/send",{to:to},function(data){
-                if(data=="sent")
-                {
-                  $("#message").empty().html("<p>Email is been sent at "+to+" . Please check inbox !</p>");
-                }
-
-              });
-            });
-          });
-        </script>
-
-        <style>
-          #container
-          {
-            margin-left:400px;
-            margin-top:50px;
-          }
-          #to,#subject,#content
-          {
-            font-family: "Segoe UI",serif;
-            font-size:18px;
-            width:530px;
-          }
-          h1
-          {
-            font-family: "Segoe UI",serif;
-            font-size:40px;
-            color: #3b5998;
-          }
-          p
-          {
-            color:green;
-          }
-          #send_email
-          {
-            font-size:15px;
-            font-family: "Segoe UI",serif;
-            margin: 80px;
-          }
-          #message
-          {
-            font-size:18px;
-
-          }
-        </style>
-
-
       <form>
       <div class="form-group">
         <div id="part1">
