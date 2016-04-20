@@ -7,11 +7,7 @@
 
   var urlBase = "https://vps258804.ovh.net:80";
   return {
-    sendEmail: function()
-    {
-      alert('clic1');
-      return $http.get(urlBase + '/send');
-    },
+
     createUsers: function(post) {
       return $http.post(urlBase+'/register',{
         'login_client': post.login_client,

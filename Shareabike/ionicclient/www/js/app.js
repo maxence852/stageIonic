@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-var myApp = angular.module('starter', ['ionic','ui.router', 'starter.controllers','ngRoute'])
+var myApp = angular.module('starter', ['ionic','ui.router', 'starter.controllers','ngRoute','ngCordova','uiGmapgoogle-maps'])
 
 myApp.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -34,6 +34,15 @@ myApp.run(function ($rootScope) {
   });
 
 });
+myApp.config(function(uiGmapGoogleMapApiProvider) {
+  uiGmapGoogleMapApiProvider.configure({
+  key: 'AIzaSyBAkbW3lDYmzsi-Ww_6Qji_UU11qgyOlPM',
+  v: '3.22',
+  libraries: 'drawing,geometry,visualization',
+  language: 'fr'
+
+  });
+});
 
 myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
 
@@ -56,9 +65,11 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     url: '/menu1',
     views: {
       'menuContent': {
-        templateUrl: 'templates/menu1.html'
+        templateUrl: 'templates/menu1.html',
+        controller: 'BrowseCtrl'
     }
   },
+
   data:
   {
     requiredLogin: true
@@ -128,7 +139,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         }
       }
     })
-/*
+
     .state('app.register2', {
       url: '/register2',
       views: {
@@ -141,7 +152,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         }
       }
     })
-    */
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login_users');
 });

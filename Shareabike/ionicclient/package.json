@@ -1,6 +1,7 @@
 {
   "name": "ionicclient2",
   "version": "1.1.1",
+  "private": true,
   "description": "ionicclient2: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",

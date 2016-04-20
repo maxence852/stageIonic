@@ -1,9 +1,33 @@
-<ion-view view-title="menu1" xmlns="http://www.w3.org/1999/html">
-  <ion-pane>
-    <ion-content>
-      <div class="list">
-          <h1>Ceci est le menu1</h1>
-        </div>
-      </ion-content>
-  </ion-pane>
+<ion-view view-title="menu1" ng-controller="BrowseCtrl" xmlns="http://www.w3.org/1999/html">
+
+
+
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header">
+    <div id="map_canvas" data-tap-disabled="true"> <!-- le data-tap-disabled permet d'activer le clic sur google maps. sans ça on ne peut ajouter de markers.-->
+    </div>
+  </ion-content>
 </ion-view>
+<!--
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header">
+    <div id="map"></div>
+      <script type="text/javascript">
+
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+          });
+        }
+          </script>
+  </ion-content>
+</ion-view>
+-->

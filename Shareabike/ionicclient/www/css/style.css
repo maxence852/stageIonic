@@ -1,34 +1,24 @@
 /* Empty. Add your own CSS if you like */
 
-#container
-{
-  margin-left:400px;
-  margin-top:50px;
+#map_canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
 }
-#to,#subject,#content
-{
-  font-family: "Segoe UI",serif;
-  font-size:18px;
-  width:530px;
-}
-h1
-{
-  font-family: "Segoe UI",serif;
-  font-size:40px;
-  color: #3b5998;
-}
-p
-{
-  color:green;
-}
-#send_email
-{
-  font-size:15px;
-  font-family: "Segoe UI",serif;
-  margin: 80px;
-}
-#message
-{
-  font-size:18px;
 
+.scroll {
+  height: 100%;
 }
+
+.angular-google-map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/*
+html, body { height: 100%; margin: 0; padding: 0; }
+#map { height: 100%; }
+*/

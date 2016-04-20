@@ -8,6 +8,7 @@ myApp.controller('LoginCtrl', ['$scope', '$window', '$location', 'UserAuthFactor
       var username = $scope.user.username,
         password = $scope.user.password;
 
+
       if (username !== undefined && password !== undefined) {
 
         UserAuthFactory.login(username, password).success(function(data) {

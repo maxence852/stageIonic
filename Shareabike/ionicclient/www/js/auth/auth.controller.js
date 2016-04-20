@@ -8,6 +8,7 @@ myApp.controller('LoginCtrlIonic', ['$scope','$state', '$window', '$location', '
       var username = $scope.login.username;
       var  password = $scope.login.password;
 
+
       if (username !== undefined && password !== undefined) {
 
         UserAuthFactory.login(username, password).success(function(data) {

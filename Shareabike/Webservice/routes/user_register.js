@@ -19,7 +19,7 @@ var secret = require('../config/secret');
 //email validation
 var nodemailer = require("nodemailer");
 var chromelogger = require('chromelogger');
-
+var cryptoJS = require("crypto-js");
 
 /* GET /clients listing.
 router.get('/', function(req, res, next) {
@@ -78,7 +78,7 @@ router.post('/', function(req, res, next) {
                     "(login_client, password_client, pseudo_client, prenom_client, nom_client," +
                         "pays_client, codePostal_client, ville_client, adresse_client, numMaison_client, gsm_client,"+
                         "type_user, modif_par, statut_client)"+
-                    "values($1, crypt(($2), gen_salt('bf',6)), $3, $4, $5,"+
+                    "values($1, crypt(($2), gen_salt('bf',6)), $3 , $4, $5,"+
                             "$6, $7, $8, $9, $10, $11,"+
                             " 1, 3, 2)";
                 var data_post = [
@@ -135,13 +135,13 @@ router.use(chromelogger.middleware);
 
 router.get('/send',function(req,res){
 
-    rand=Math.floor((Math.random() * 100) + 54);
+    rand= cryptoJS.MD5(Math.floor((Math.random() * 100) + 54));
     host=req.get('host');
     link="https://"+req.get('host')+"/register/verify?id="+rand;
     //link ="https://vps258804.ovh.net/send/verify?id="+rand;
     mailOptions={
         to : req.query.to,
-        subject : "Please confirm your Email ionic account",
+        subject : "Please confirm your Email ShareABike account",
         html : "Hello,<br> Please Click on the link to verify your email.<br><a href="+link+">Click here to verify</a>"
     };
     console.log(mailOptions);
@@ -165,6 +165,11 @@ router.get('/verify',function(req,res){
         console.log("Domain is matched. Information is from Authentic email");
         if(req.query.id==rand)
         {
+            pg.connect(databaseURL, function(err, client, done) {
+                var sql = "UPDATE clients set"+
+                        "statut_client=1";
+            });
+
             console.log("email is verified");
             res.end("<h1>Votre compte ShareABike "+mailOptions.to+" a bien été activé");
         }
