@@ -66,7 +66,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     views: {
       'menuContent': {
         templateUrl: 'templates/menu1.html',
-        controller: 'BrowseCtrl'
+        controller: 'MapCtrl'
     }
   },
 

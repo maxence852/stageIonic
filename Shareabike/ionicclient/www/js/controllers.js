@@ -92,7 +92,7 @@ myApp.controller("RegisterCtrl", ['$scope' ,'$state', '$location', 'dataFactory2
 
 
 //controller de google map
-myApp.controller('BrowseCtrl',function($scope,$state, $ionicSideMenuDelegate, $cordovaGeolocation, uiGmapGoogleMapApi)
+myApp.controller('MapCtrl',function($scope,$state, $ionicSideMenuDelegate, $cordovaGeolocation, uiGmapGoogleMapApi)
 {
     uiGmapGoogleMapApi.then(function(maps)  //ligne importante car permet de bien charger tout les composants de google map et puis ensuite de faire ce qu'il y a en dessous. Si pas cette ligne erreur de type : google is not defined.
     {
@@ -112,7 +112,7 @@ myApp.controller('BrowseCtrl',function($scope,$state, $ionicSideMenuDelegate, $c
         $state.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 
 
-        //afficher le marker là où l'on se trouve grace aux coordonnées du gps récupérées.
+        //afficher le marker là où l'on se trouve grâce aux coordonnées du gps récupérées.
         google.maps.event.addListenerOnce($state.map, 'idle', function () {
 
           var marker = new google.maps.Marker({
@@ -124,14 +124,14 @@ myApp.controller('BrowseCtrl',function($scope,$state, $ionicSideMenuDelegate, $c
           var infoWindow = new google.maps.InfoWindow({
             content: "Vous êtes ici"
           });
-          //Quand on clic sur la balise celà affiche le msg qu'il y a dans le content. Ds ce cas : "Vous êtes ici"
+          //Quand on clic sur le marker celà affiche le msg qu'il y a dans le content. Ds ce cas : "Vous êtes ici"
           google.maps.event.addListener(marker, 'click', function () {
             infoWindow.open($state.map, marker);
           });
 
 
         });
-        //Lorsque l'on clic n'importe où sur la carte cela affiche un maker.
+        //Lorsque l'on clic n'importe où sur la carte cela affiche un marker.
         google.maps.event.addListener($state.map, 'click', function(event) {
           placeMarker(event.latLng);
         });
@@ -142,8 +142,9 @@ myApp.controller('BrowseCtrl',function($scope,$state, $ionicSideMenuDelegate, $c
             map: $state.map
 
           });
-          var infoWindow = new google.maps.InfoWindow({
+          var infoWindow = new google.maps.InfoWindow ({
             content: location.toString()
+
           });
           //Affiche les coordonnées gps lorsque l'on clic sur un marker.
           google.maps.event.addListener(marker, 'click', function () {

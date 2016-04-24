@@ -1,11 +1,7 @@
 /**
  * Created by maxence on 05/04/2016.
  */
-/*
- Kaysarov
- Mis à jours : 16/12/2015
 
- */
 
 var express = require('express');
 var router = express.Router();
@@ -20,7 +16,7 @@ var secret = require('../config/secret');
 var nodemailer = require("nodemailer");
 var chromelogger = require('chromelogger');
 var cryptoJS = require("crypto-js");
-
+var myLogin = "";
 /* GET /clients listing.
 router.get('/', function(req, res, next) {
     //connexion à PostgreSQL
@@ -81,6 +77,7 @@ router.post('/', function(req, res, next) {
                     "values($1, crypt(($2), gen_salt('bf',6)), $3 , $4, $5,"+
                             "$6, $7, $8, $9, $10, $11,"+
                             " 1, 3, 2)";
+                myLogin = req.body.login_client;
                 var data_post = [
                     req.body.login_client,
                     req.body.password_client,
@@ -121,7 +118,8 @@ router.post('/', function(req, res, next) {
 });
 
 
-//Validation E mail
+//*******Validation E mail*********
+//Configuration E mail "source"
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "hotmail",
     auth: {
@@ -135,7 +133,8 @@ router.use(chromelogger.middleware);
 
 router.get('/send',function(req,res){
 
-    rand= cryptoJS.MD5(Math.floor((Math.random() * 100) + 54));
+    //rand= cryptoJS.MD5(Math.floor((Math.random() * 100) + 54));
+    rand= cryptoJS.MD5(myLogin);//crypt tempo le login pour le mail
     host=req.get('host');
     link="https://"+req.get('host')+"/register/verify?id="+rand;
     //link ="https://vps258804.ovh.net/send/verify?id="+rand;
@@ -148,42 +147,73 @@ router.get('/send',function(req,res){
     smtpTransport.sendMail(mailOptions, function(error, response){
         if(error){
             console.log(error);
-            res.chrome.log(error);
             res.end("error"+error);
         }else{
             console.log("Message sent: " + response.message);
-            res.end("sent");
+            res.end("sent"+myLogin);
         }
     });
 });
 router.get('/verify',function(req,res){
 
     console.log(req.protocol+":/"+req.get('host'));
-    if((req.protocol+"://"+req.get('host'))==("https://"+host))
-    //if((("https://vps258804.ovh.net/send/verify?id="+rand))==("https://"+host))
+    //if((req.protocol+"://"+req.get('host'))==("https://"+host))
+    //if((("https://vps258804.ovh.net:80/send/verify?id="+rand))==("https://"+host))
     {
-        console.log("Domain is matched. Information is from Authentic email");
-        if(req.query.id==rand)
-        {
-            pg.connect(databaseURL, function(err, client, done) {
-                var sql = "UPDATE clients set"+
-                        "statut_client=1";
-            });
 
-            console.log("email is verified");
-            res.end("<h1>Votre compte ShareABike "+mailOptions.to+" a bien été activé");
-        }
-        else
-        {
-            console.log("email is not verified");
-            res.end("<h1>Bad Request</h1>");
-        }
+        console.log("Domain is matched. Information is from Authentic email");
+        pg.connect(databaseURL, function(err, client, done) {
+            var sql = "SELECT login_client, idclient FROM clients "+
+                "where statut_client = 2;";
+            client.query(sql, function (err, myClient) {
+
+                if (err) return res.sendStatus(401);
+                //console.log(user.rows[0].niveau)
+                done();
+                var found = false;
+
+
+                for(i=0;i<myClient.rows.length ; i++)
+                {
+                    rand= cryptoJS.MD5(myClient.rows[i].login_client);
+
+                    if(req.query.id==rand) {
+
+                        var sqlUpdate = "UPDATE clients set " +
+                            "statut_client=1 WHERE idClient = " + myClient.rows[i].idclient;
+
+                        client.query(sqlUpdate, function (err, ffff) {
+
+
+                            if (err) {
+                                log.info(err);
+                                return res.sendStatus(401);
+                            }
+                        });
+                        found = true;
+                        res.end("<h1>Votre compte ShareABike " + myLogin + " a bien été activé</h1>");
+
+                        console.log("email is verified");
+                    }
+
+                }
+                if(!found){
+                    console.log("email is not verified");
+                    res.end("<h1>Bad Request</h1>");
+                }
+
+            });
+        });
+
+
+
     }
+    /*
     else
     {
         res.end("<h1>Request is from unknown source</h1>");
     }
-
+*/
 });
 
 //test post qui fonctionne avec une autre table #maxence

@@ -1,7 +1,8 @@
 {
   "port": 443,
   "base": {
-  	"uri": "https://vps258804.ovh.net:80/api/admin"
+  	//"uri": "https://vps258804.ovh.net:80/api/admin"
+	  "uri": "localhost"
   	},
   "tls": {
   	"key": "./config/server.enc.key",
