@@ -1,6 +1,7 @@
 {
   "port": 443,
   "base": {
+    //"uri":"localhost"
     //"uri": "https://localhost:80/api/user"
   	"uri": "https://vps258804.ovh.net:80/api/user"
   	},

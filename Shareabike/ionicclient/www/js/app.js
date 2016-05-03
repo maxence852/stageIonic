@@ -127,6 +127,7 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         }
       }
     })
+
     .state('app.register1', {
       url: '/register1',
       views: {
@@ -140,18 +141,6 @@ myApp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
       }
     })
 
-    .state('app.register2', {
-      url: '/register2',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/register2.html',
-          controller: 'RegisterCtrl',
-          data: {
-            requiredLogin: false
-          }
-        }
-      }
-    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login_users');

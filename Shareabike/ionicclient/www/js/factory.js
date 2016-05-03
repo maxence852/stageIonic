@@ -5,8 +5,8 @@
 //***********Inscription register*********
   myApp.factory('dataFactory2', function($http) {
 
- var urlBase = "https://vps258804.ovh.net:80";
-   //var urlBase = "https://localhost:80";
+    var urlBase = "https://vps258804.ovh.net:80";
+  //var urlBase = "https://localhost:80";
   return {
 
     createUsers: function(post) {

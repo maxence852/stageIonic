@@ -6,7 +6,8 @@ Mis à jours : 28/12/2015
 
 myApp.factory('dataFactory', function($http) {
 
-    var urlBase = "https://vps258804.ovh.net:80/api";
+    //var urlBase = "https://vps258804.ovh.net:80/api";
+    var urlBase = "https://localhost:80/api"
     return {
 /*administrateur*/
         read: function(id) {

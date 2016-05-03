@@ -33,7 +33,8 @@ myApp.factory('AuthenticationFactory', function($window, $http) {
 myApp.factory('UserAuthFactory', function($window, $location, $http, AuthenticationFactory) {
   return {
     login: function(username, password) {
-      return $http.post('https://vps258804.ovh.net:80/login', {
+      //return $http.post('https://vps258804.ovh.net:80/login', {
+      return $http.post('https://localhost:80/login', {
         login: username,
         password: password
       });

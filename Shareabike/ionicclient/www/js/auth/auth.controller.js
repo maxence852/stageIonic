@@ -8,7 +8,6 @@ myApp.controller('LoginCtrlIonic', ['$scope','$state', '$window', '$location', '
       var username = $scope.login.username;
       var  password = $scope.login.password;
 
-
       if (username !== undefined && password !== undefined) {
 
         UserAuthFactory.login(username, password).success(function(data) {
@@ -20,9 +19,6 @@ myApp.controller('LoginCtrlIonic', ['$scope','$state', '$window', '$location', '
               //$location.path('/');
               $state.go('app.menu1'); //Pour que cela fonctionne avec Ionic il faut utiliser $state.go et pas $location.path
               alert('#JeSuisAuthController');
-          //}).error(function(status) {
-          //  alert("Vous n'avez pas le droit d'administrateur!");
-          //});
         }).error(function(status) {
           alert('Mot de passe ou Login non valide eee !');
         });

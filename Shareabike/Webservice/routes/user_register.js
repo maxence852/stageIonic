@@ -17,6 +17,7 @@ var nodemailer = require("nodemailer");
 var chromelogger = require('chromelogger');
 var cryptoJS = require("crypto-js");
 var myLogin = "";
+
 /* GET /clients listing.
 router.get('/', function(req, res, next) {
     //connexion à PostgreSQL
@@ -97,7 +98,6 @@ router.post('/', function(req, res, next) {
                     ];
 
                 client.query(sql, data_post, function (err, clients_post){
-
                     if (err) {
                         res.status(400);
                         log.info(err);
@@ -133,11 +133,9 @@ router.use(chromelogger.middleware);
 
 router.get('/send',function(req,res){
 
-    //rand= cryptoJS.MD5(Math.floor((Math.random() * 100) + 54));
-    rand= cryptoJS.MD5(myLogin);//crypt tempo le login pour le mail
+    rand= cryptoJS.MD5(myLogin);//crypt temporairement le login pour le mail
     host=req.get('host');
     link="https://"+req.get('host')+"/register/verify?id="+rand;
-    //link ="https://vps258804.ovh.net/send/verify?id="+rand;
     mailOptions={
         to : req.query.to,
         subject : "Please confirm your Email ShareABike account",
